@@ -1,0 +1,16 @@
+{
+  "name": "victor-s-2.0",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass sass/style.scss ./style/style.css --watch",
+    "compress": "sass --watch sass/style.scss:style.css --style compressed"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.69.5"
+  }
+}

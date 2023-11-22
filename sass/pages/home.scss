@@ -1,11 +1,11 @@
-/*body {
+body {
     margin: 0;
     padding: 0;
     height: 100vh;
     background-image: url('/images/IndexImg/Victor1.png');
     background-size: cover;
     background-position: center;
-    position: relative; /* Importante para posicionar elementos filhos relativos a este contêiner 
+    position: relative; /* Importante para posicionar elementos filhos relativos a este contêiner */
 }
 
 .container{
@@ -34,9 +34,9 @@
     }
 
     hr{
-            width: 500px; /* Largura desejada para a linha 
-            border: 0.1px solid #ffffff; /* Cor e estilo da linha 
-            margin: 30px auto; /* Espaçamento ao redor da linha 
+            width: 500px; /* Largura desejada para a linha */
+            border: 0.1px solid #ffffff; /* Cor e estilo da linha */ 
+            margin: 30px auto; /* Espaçamento ao redor da linha  */
     }
 
     button{
@@ -60,5 +60,3 @@
 .home-link2:hover{
     color: $primary-font-hover;
 }
-
-*/

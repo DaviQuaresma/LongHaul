@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Link do Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    
+
     <!-- Link do Css -->
     <link rel="stylesheet" href="/style/style.css">
 
-    <title>Ensaios - LongHaul</title>
+    <title>Home - LongHaul</title>
 </head>
-<body>
+<body class="body-background-carrossel">
+    <!-- Seu Header -->
     <header>
         <nav class="navbar navbar-expand-lg navBar-Home">
             <div class="container">
@@ -24,15 +25,12 @@
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-            
+
                 <!-- Itens do Navbar à direita -->
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="home-link nav-link" href="#">HOME</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="home-link nav-link" href="#">ENSAIOS</a>
+                            <a class="home-link nav-link" href="/pages/ensaios.html">ENSAIOS</a>
                         </li>
                         <li class="nav-item">
                             <a class="home-link nav-link" href="#">SOBRE</a>
@@ -49,27 +47,32 @@
         </nav>
     </header>
 
-    <section class="container-home">
-        <div class="overlay-content">
-            <div class="content-home">
-                <p>Você merece ter o melhor ensaio</p>
-                
-                <h1>ENSAIOS EXCLUSIVOS</h1>
-                
-                <hr class="custom-hr">
-                
-                <p>LongHaul, a qualidade não é apenas medida, mas uma expressão <br> autêntica da beleza. 
-                    Descubra cinco ensaios que destacam a maestria <br> por trás da lente, convidando-o a 
-                    apreciar a arte de um olhar <br> diferenciado.</p>
-
-                <button class="default-button mx-auto mt-5">Ver ensaios!</button>
-            </div>
+    <!-- Seu Carrossel -->
+    
+    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="/images/EnsaiosImg/Davi&Joyce.png" class="d-block w-100">
+          </div>
+          <div class="carousel-item">
+            <img src="/images/EnsaiosImg/Petra5.png" class="d-block w-100">
+          </div>
+          <div class="carousel-item">
+            <img src="/images/IndexImg/Victor1.png" class="d-block w-100">
+          </div>
         </div>
-    </section>
-
-    <!-- Adicione o Bootstrap JS (opcional, mas necessário para algumas funcionalidades) -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-</body>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    
+        <!-- Adicione o Bootstrap JS (opcional, mas necessário para algumas funcionalidades) -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    </body>
 </html>

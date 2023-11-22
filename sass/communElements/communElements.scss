@@ -33,3 +33,20 @@
     background-color: $primary-font-color;
     color: #ffffff;
   }
+
+/* Header content */
+
+.home-link{
+    color: #ffffff;
+    margin-right: 25px;
+}
+
+.home-link2{
+    color: #ffffff;
+    margin-left: 35px;
+}
+
+.home-link:hover, 
+.home-link2:hover{
+    color: $primary-font-hover;
+}

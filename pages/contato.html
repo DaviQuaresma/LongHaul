@@ -4,78 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Link do Bootstrap -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-      crossorigin="anonymous"
-    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
 
     <!-- Link do Css -->
     <link rel="stylesheet" href="/style/style.css">
 
-    <title>Home - LongHaul</title>
+    <title>Contato - LongHaul</title>
 </head>
-<body class="pt-navbar">
-    <header>
-        <nav class="navbar navbar-expand-lg navBar-Home fixed-top">
-            <div class="container">
-                <a class="navbar-brand" href="/dist/index.html">
-                    <img src="/images/HomeImg/LogoBranca.webp" alt="">
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="link nav-link" href="/dist/index.html">HOME</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="link nav-link" href="/pages/ensaios.html">ENSAIOS</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="link nav-link" href="/pages/sobre.html">SOBRE</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="link nav-link" href="/pages/contato.html">CONTATO</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="link2 nav-link" href="#">PT</a>
-                        </li>
-                    </ul>
-                </div>
+<body>
+
+    <div class="container">
+        <div class="left-container">
+            <div class="image-arrow">
+                <img src="/images/ensaioIndividual/arrowLeft.svg" alt="">
             </div>
-        </nav>
-    </header>
-
-    <section class="sobre">
-        <img src="/images/SobreImg/VictorFace.png" alt="">
-        
-        <div>
-
-            <h1>VICTOR QUARESMA</h1>
-
-            <p>Victor é um fotografo de lifestyle onde busca sempre trazer um storytelling em cada trabalho que ele faz, o foco não é apenas o modelo e 
-                sim todo o cenário como um todo. Particularmente se sente mais em casa quando está em contato com a natureza, porém não se limita apenas 
-                em um tipo de local ou cenário, faz o que é necessário para ter a melhor entrega em qualquer projeto. Cada detalhe importa, cada segundo 
-                importa, é nos pequenos momentos que surgem os grandes momentos, para ele, não se trata apenas do resultado e sim da jornada inteira. </p>
+            <div class="image-logo">
+                <img src="/images/HomeImg/LogoBranca.webp" alt="">
+            </div>
             
-            <p>O nome <b>“LongHaul”</b> que significa <b>“Longa Jornada”</b> ou <b>“Longo Curso”</b>, surgiu da interpretação da minha vida pessoal, onde antes ter chegado 
-                onde cheguei, precisei passar por vários processos, por várias tentativas de me encaixar em algum lugar, em alguma área. Persisti em
-                 manter esse nome pelo grande significado que tem para mim e pelo o quê me mantenho seguindo em frete.</p>
-            
-            <p>A LongHaul é o que eu chamo de “Nosso Sonho”, pois não é um business que só se mantém através de mim, mas sim através de uma comunidade, 
-                uma tribo que acredita nesse sonho, que entende que a verdadeira atração está nos detalhes de cada fotografia, de cada história que um 
-                ângulo conta, de que podemos ser os protagonistas de nossas vidas onde criamos momentos em um estilo de criatividade que poucos buscam 
-                explorar.</p>
-            
+            <div class="contact-form">
+                <h2>Entre em Contato</h2>
+                <p>Preencha o formulário abaixo e entraremos em contato em breve.</p>
+                <form action="">
+                    <div class="mb-3">
+                        <label for="fullName" class="form-label">Nome Completo</label>
+                        <input type="text" class="form-control" id="fullName" placeholder="Nome completo" aria-label="Full name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Endereço de E-mail</label>
+                        <input type="email" class="form-control" id="email" placeholder="email" aria-label="email">
+                    </div>
+                    <div class="mb-3">
+                        <label for="subject" class="form-label">Assunto</label>
+                        <input type="text" class="form-control" id="subject" placeholder="Assunto">
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Sua Mensagem</label>
+                        <textarea class="form-control" id="message" rows="4" placeholder="Digite sua mensagem aqui"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </form>
+            </div>
         </div>
-    </section>
-    
-    
-        <!-- Adicione o Bootstrap JS (opcional, mas necessário para algumas funcionalidades) -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    
-    </body>
+
+        <div class="right-container">
+            <img src="/images/ContatoImg/Planta1.png" alt="">
+        </div>
+    </div>
+
+    <!-- Adicione o Bootstrap JS (opcional, mas necessário para algumas funcionalidades) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
 </html>

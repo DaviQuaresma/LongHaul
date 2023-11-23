@@ -1,0 +1,60 @@
+body {
+    background-color: $primary-green;
+    margin: 0; /* Remova as margens padrão do corpo para cobrir toda a largura */
+}
+
+.logo {
+    width: 30px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $primary-black;
+    padding: 50px; /* Adicione um preenchimento para afastar do topo e das bordas */
+    max-width: 1200px; /* Ajuste a largura máxima do container conforme necessário */
+    margin: 0 auto; /* Centralize o container na tela */
+}
+
+.left-container {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+
+.right-container {
+    width: 100vh;
+}
+
+.contact-form {
+    max-width: 300px; /* Reduzi o tamanho do formulário */
+    margin-bottom: 20px; /* Adicionei margem inferior para separar do título abaixo */
+}
+
+.contact-form h2 {
+    color: white;
+    font-size: 1.5rem; /* Ajuste o tamanho do título conforme necessário */
+}
+
+.contact-form p {
+    color: white;
+    font-size: 0.9rem; /* Ajuste o tamanho do texto conforme necessário */
+}
+
+.image-arrow {
+    width: 20%; /* Ajuste a largura da imagem para ocupar 100% do contêiner */
+    height: auto; /* Permita que a altura seja ajustada proporcionalmente à largura */
+    display: block; /* Remova a margem inferior adicional causada por imagens em linha */
+}
+
+.image-logo {
+    width: 100%; /* Ajuste a largura da imagem para ocupar 100% do contêiner */
+    height: auto; /* Permita que a altura seja ajustada proporcionalmente à largura */
+    display: block; /* Remova a margem inferior adicional causada por imagens em linha */
+}
+
+
+form {
+    color: white;
+}

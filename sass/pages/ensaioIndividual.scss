@@ -1,0 +1,58 @@
+.ensaio-link{
+    color: $primary-font-color;
+    margin-right: 25px;
+}
+
+.ensaio-link2{
+    color: $primary-font-color;
+    margin-left: 35px;
+}
+
+.ensaio-link:hover, 
+.ensaio-link2:hover{
+    color: $primary-font-hover;
+}
+
+
+body {
+    margin: 0; /* Remover margens padrão do corpo */
+}
+
+.image-container {
+    padding-top: 11%;
+    padding-bottom: 2%; /* Adicionando algum espaço na parte inferior */
+    display: flex;
+    overflow-x: hidden; /* Removendo a barra de rolagem horizontal */
+    scroll-behavior: smooth;
+}
+
+.image-container img {
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.left-arrow-container,
+.right-arrow-container {
+    position: fixed;
+    top: 50%;
+    z-index: 1000;
+}
+
+.left-arrow,
+.right-arrow {
+    color: white;
+    cursor: pointer;
+    font-size: 50px;
+    padding: 15px; /* Adicionando algum espaço em torno da seta */
+}
+
+.left-arrow-container {
+    left: 0;
+}
+
+.right-arrow-container {
+    right: 0;
+}
+

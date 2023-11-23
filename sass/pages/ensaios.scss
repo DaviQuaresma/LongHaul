@@ -42,9 +42,35 @@ header {
     }
 }
 
-.carousel-control-prev, .carousel-control-next{
-    color: black;
-    background-color: transparent;
-    margin: 0;
-    border: 0;
+.img-ensaios {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+
+/* Adicione este estilo para o bloco de nome */
+.name-block {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    background-color: $secundary-black;
+    color: white;
+    padding: 10px 30px 10px 30px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dark-text {
+    font-weight: 700;
+    color: $primary-font-hover; /* ou a cor desejada para o texto mais escuro */
+}
+
+.white-text {
+    color: white;
+}
+
+.spacer {
+    margin: 0 10px; /* ou ajuste conforme necessário */
 }

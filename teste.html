@@ -3,70 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-      crossorigin="anonymous"
-    />
-    <title>Document</title>
-    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <title>Image Slider</title>
+    <style>
+        body {
+            margin: 0; /* Remover margens padrão do corpo */
+        }
+
+        .scroll-images{
+          margin-top: 50px;
+        }
+
+        .image-container {
+            display: flex;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+        }
+
+        .image-container img {
+            width: 300px;
+            height: 400px;
+            object-fit: cover;
+            cursor: pointer;
+        }
+
+        .left-arrow-container,
+        .right-arrow-container {
+            position: fixed;
+            top: 50%;
+            z-index: 1000;
+        }
+
+        .left-arrow {
+            color: white;
+            cursor: pointer;
+            font-size: 50px;
+            padding: 15px; /* Adicionando algum espaço em torno da seta */
+        }
+
+        .right-arrow {
+          color: white;
+            cursor: pointer;
+            font-size: 50px;
+            padding: 15px; /* Adicionando algum espaço em torno da seta */
+        }
+
+        .left-arrow-container {
+            left: 0;
+        }
+
+        .right-arrow-container {
+            right: 0;
+        }
+    </style>
+    <link rel="preload" as="image" href="/images/ContatoImg/Planta1.png">
+    <link rel="preload" as="image" href="/images/EnsaiosImg/Davi&Joyce.png">
+    <!-- Adicione links de pré-carregamento para outras imagens -->
 </head>
-
-<style>
-  body {
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    overflow-x: hidden; /* Para evitar a barra de rolagem horizontal */
-    background-size: cover;
-    background-position: center;
-    position: relative; /* Importante para posicionar elementos filhos relativos a este contêiner */
-}
-
-/* Estilo para o header ficar sobreposto */
-header {
-    position: fixed;
-    width: 100%;
-    z-index: 1000; /* Certifique-se de que o header está acima do carrossel */
-}
-
-/* Estilo para o carrossel ocupar a tela inteira */
-#carouselExampleIndicators {
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-}
-
-.body-background-carrossel{
-    cursor: pointer;
-}
-
-.overlay-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    text-align: center;
-}
-
-.container{
-    img{
-        width: 50%;
-        margin-right: 100%;
-    }
-}
-
-.carousel-control-prev, .carousel-control-next{
-    color: black;
-    background-color: transparent;
-    margin: 0;
-    border: 0;
-}
-
-</style>
-
 <body>
 
   <header>
@@ -74,7 +67,7 @@ header {
         <div class="container">
             <!-- Logo à esquerda -->
             <a class="navbar-brand" href="/dist/index.html">
-                <img src="/images/HomeImg/LogoBranca.webp" alt="">
+                <img src="/images/ensaioIndividual/LogoVerde.webp" alt="">
             </a>
 
             <!-- Botão para acionar o offcanvas -->
@@ -86,16 +79,19 @@ header {
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="home-link nav-link" href="/pages/ensaios.html">ENSAIOS</a>
+                        <a class="ensaio-link nav-link" href="/dist/index.html">HOME</a>
                     </li>
                     <li class="nav-item">
-                        <a class="home-link nav-link" href="#">SOBRE</a>
+                        <a class="ensaio-link nav-link" href="/pages/ensaios.html">ENSAIOS</a>
                     </li>
                     <li class="nav-item">
-                        <a class="home-link nav-link" href="#">CONTATO</a>
+                        <a class="ensaio-link nav-link" href="#">SOBRE</a>
                     </li>
                     <li class="nav-item">
-                        <a class="home-link2 nav-link" href="#">PT</a>
+                        <a class="ensaio-link nav-link" href="#">CONTATO</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="ensaio-link2 nav-link" href="#">PT</a>
                     </li>
                 </ul>
             </div>
@@ -103,30 +99,41 @@ header {
     </nav>
 </header>
 
-  <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="/images/EnsaiosImg/Davi&Joyce.png" class="d-block w-100">
-      </div>
-      <div class="carousel-item">
-        <img src="/images/EnsaiosImg/Petra5.png" class="d-block w-100">
-      </div>
-      <div class="carousel-item">
-        <img src="/images/IndexImg/Victor1.png" class="d-block w-100">
-      </div>
+  <section class="scroll-images">
+<div class="left-arrow-container">
+    <div class="left-arrow" onclick="scrollImages(-1)">
+    <img class="arrow" src="/images/ensaioIndividual/arrowLeft.svg" alt="">  
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
+</div>
 
-    <!-- Adicione o Bootstrap JS (opcional, mas necessário para algumas funcionalidades) -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<div class="right-arrow-container">
+    <div class="right-arrow" onclick="scrollImages(1)">
+      <img class="arrow" src="/images/ensaioIndividual/arrowRight.svg" alt="">  
+    </div>
+</div>
+
+<div class="image-container">
+    <!-- Adicione mais imagens conforme necessário -->
+    <img src="/images/ContatoImg/Planta1.png" class="img-thumbnail mx-2" alt="Image 1">
+    <img src="/images/EnsaiosImg/Davi&Joyce.png" class="img-thumbnail mx-2" alt="Image 2">
+    <img src="/images/HomeImg/Petra1.png" class="img-thumbnail mx-2" alt="Image 3">
+    <img src="/images/HomeImg/Petra2.png" class="img-thumbnail mx-2" alt="Image 4">
+    <img src="/images/HomeImg/Petra3.png" class="img-thumbnail mx-2" alt="Image 5">
+    <img src="/images/HomeImg/Petra4.png" class="img-thumbnail mx-2" alt="Image 6">
+    <img src="/images/IndexImg/Victor1.png" class="img-thumbnail mx-2" alt="Image 7">
+</div>
+
+</section>
+
+<!-- Bootstrap JS (optional) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    function scrollImages(direction) {
+        const container = document.querySelector('.image-container');
+        const scrollAmount = 400; // Ajuste conforme necessário
+        container.scrollLeft += scrollAmount * direction;
+    }
+</script>
 
 </body>
 </html>

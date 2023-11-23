@@ -37,18 +37,18 @@
 }
 
 /* Header content */
-.home-link {
+.link {
   color: #ffffff;
   margin-right: 25px;
 }
 
-.home-link2 {
+.link2 {
   color: #ffffff;
   margin-left: 35px;
 }
 
-.home-link:hover,
-.home-link2:hover {
+.link:hover,
+.link2:hover {
   color: #A29E9E;
 }
 
@@ -142,11 +142,94 @@ header {
   margin-right: 100%;
 }
 
-.carousel-control-prev, .carousel-control-next {
-  color: black;
-  background-color: transparent;
-  margin: 0;
-  border: 0;
+.img-ensaios {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+
+/* Adicione este estilo para o bloco de nome */
+.name-block {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  background-color: #1E1C1C;
+  color: white;
+  padding: 10px 30px 10px 30px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dark-text {
+  font-weight: 700;
+  color: #A29E9E; /* ou a cor desejada para o texto mais escuro */
+}
+
+.white-text {
+  color: white;
+}
+
+.spacer {
+  margin: 0 10px; /* ou ajuste conforme necessário */
+}
+
+.ensaio-link {
+  color: #8C8C7C;
+  margin-right: 25px;
+}
+
+.ensaio-link2 {
+  color: #8C8C7C;
+  margin-left: 35px;
+}
+
+.ensaio-link:hover,
+.ensaio-link2:hover {
+  color: #A29E9E;
+}
+
+body {
+  margin: 0; /* Remover margens padrão do corpo */
+}
+
+.image-container {
+  padding-top: 11%;
+  padding-bottom: 2%; /* Adicionando algum espaço na parte inferior */
+  display: flex;
+  overflow-x: hidden; /* Removendo a barra de rolagem horizontal */
+  scroll-behavior: smooth;
+}
+
+.image-container img {
+  width: 300px;
+  height: 400px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.left-arrow-container,
+.right-arrow-container {
+  position: fixed;
+  top: 50%;
+  z-index: 1000;
+}
+
+.left-arrow,
+.right-arrow {
+  color: white;
+  cursor: pointer;
+  font-size: 50px;
+  padding: 15px; /* Adicionando algum espaço em torno da seta */
+}
+
+.left-arrow-container {
+  left: 0;
+}
+
+.right-arrow-container {
+  right: 0;
 }
 
 /*# sourceMappingURL=style.css.map */

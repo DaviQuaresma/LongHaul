@@ -1,0 +1,34 @@
+body, html{
+    background-color: $primary-green;
+}
+
+body.pt-navbar {
+    padding-top: 56px; /* ou ajuste conforme necessário para corresponder à altura da sua barra de navegação */
+}
+
+.sobre{
+
+    display: grid;
+
+    img{
+        width: 75%;
+        margin-left: 13%;
+        margin-top: 7%;
+    }
+
+    div{
+        margin: 100px 50px 100px 50px;
+    }
+
+    h1{
+        color: white;
+        font-weight: 900;
+        text-align: left;
+        padding: 0px 0px 30px 100px;
+    }
+
+    p{
+        color: white;
+        padding: 0px 70px 0px 70px
+    }
+}

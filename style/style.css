@@ -232,4 +232,34 @@ body {
   right: 0;
 }
 
+body, html {
+  background-color: #8E8D7E;
+}
+
+body.pt-navbar {
+  padding-top: 56px; /* ou ajuste conforme necessário para corresponder à altura da sua barra de navegação */
+}
+
+.sobre {
+  display: grid;
+}
+.sobre img {
+  width: 75%;
+  margin-left: 13%;
+  margin-top: 7%;
+}
+.sobre div {
+  margin: 100px 50px 100px 50px;
+}
+.sobre h1 {
+  color: white;
+  font-weight: 900;
+  text-align: left;
+  padding: 0px 0px 30px 100px;
+}
+.sobre p {
+  color: white;
+  padding: 0px 70px 0px 70px;
+}
+
 /*# sourceMappingURL=style.css.map */

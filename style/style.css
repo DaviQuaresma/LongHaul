@@ -232,15 +232,13 @@ body {
   right: 0;
 }
 
-body, html {
+.pt-navbar {
+  padding-top: 56px; /* ou ajuste conforme necessário para corresponder à altura da sua barra de navegação */
   background-color: #8E8D7E;
 }
 
-body.pt-navbar {
-  padding-top: 56px; /* ou ajuste conforme necessário para corresponder à altura da sua barra de navegação */
-}
-
 .sobre {
+  background-color: #8E8D7E;
   display: grid;
 }
 .sobre img {

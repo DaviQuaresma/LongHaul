@@ -1,13 +1,10 @@
-body, html{
+.pt-navbar {
+    padding-top: 56px; /* ou ajuste conforme necessário para corresponder à altura da sua barra de navegação */
     background-color: $primary-green;
 }
 
-body.pt-navbar {
-    padding-top: 56px; /* ou ajuste conforme necessário para corresponder à altura da sua barra de navegação */
-}
-
 .sobre{
-
+    background-color: $primary-green;
     display: grid;
 
     img{

@@ -1,60 +1,82 @@
-body {
-    background-color: $primary-green;
+.form-body {
+    background-color: $primary-black;
     margin: 0; /* Remova as margens padrão do corpo para cobrir toda a largura */
 }
 
-.logo {
-    width: 30px;
-}
-
-.container {
+.main {
+    padding: 7% 25% 0% 25%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    background-color: $primary-black;
-    padding: 50px; /* Adicione um preenchimento para afastar do topo e das bordas */
-    max-width: 1200px; /* Ajuste a largura máxima do container conforme necessário */
-    margin: 0 auto; /* Centralize o container na tela */
 }
 
-.left-container {
-    width: 60%;
-    display: flex;
-    flex-direction: column;
+.container-content {
+    background-color: $secundary-black;
+    height: 79.2vh;
 }
 
-.right-container {
-    width: 100vh;
+.image-planta {
+    width: 60vh;
 }
 
-.contact-form {
-    max-width: 300px; /* Reduzi o tamanho do formulário */
-    margin-bottom: 20px; /* Adicionei margem inferior para separar do título abaixo */
+
+.container-form {
+    padding: 0px 40px 40px 0px;
 }
 
-.contact-form h2 {
+.form-content {
+    width: 80vh;
+    padding: 20px 10px 0px 50px;
+
+    h1 {
+        color: #fff;
+        font-weight: 600;
+    }
+
+    p {
+        color: #fff;
+    }
+
+    button {
+        width: 200px;
+        font-size: 15px;
+    }
+}
+
+.container-text {
+    padding: 20px 0px 70px 0px;
+}
+
+.form-control {
+    font-size: 12px;
+    position: relative;
+    background: transparent;
+    border: none;
+    outline: none;
     color: white;
-    font-size: 1.5rem; /* Ajuste o tamanho do título conforme necessário */
+    border-bottom: 1px solid white;
+    transition: border-bottom-color 0.3s ease, font-size 0.3s ease, transform 0.3s ease;
 }
 
-.contact-form p {
+.form-control::placeholder {
+    font-size: 12px;
     color: white;
-    font-size: 0.9rem; /* Ajuste o tamanho do texto conforme necessário */
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform-origin: left top;
+    transition: font-size 0.3s ease, transform 0.3s ease;
 }
 
-.image-arrow {
-    width: 20%; /* Ajuste a largura da imagem para ocupar 100% do contêiner */
-    height: auto; /* Permita que a altura seja ajustada proporcionalmente à largura */
-    display: block; /* Remova a margem inferior adicional causada por imagens em linha */
+.form-control:focus::placeholder {
+    color: #fff;
+    font-size: 0.8rem;
+    transform: translateY(-12px);
 }
 
-.image-logo {
-    width: 100%; /* Ajuste a largura da imagem para ocupar 100% do contêiner */
-    height: auto; /* Permita que a altura seja ajustada proporcionalmente à largura */
-    display: block; /* Remova a margem inferior adicional causada por imagens em linha */
-}
-
-
-form {
-    color: white;
+.form-control:focus {
+    color: $primary-font-color;
+    background-color: transparent;
+    border-bottom-color: $primary-font-color; /* Cor azul quando o campo está focado */
+    box-shadow: none; /* Remove o contorno padrão quando o campo está focado */
 }

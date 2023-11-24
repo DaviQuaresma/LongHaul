@@ -1,16 +1,17 @@
 .pt-navbar {
     padding-top: 56px; /* ou ajuste conforme necessário para corresponder à altura da sua barra de navegação */
-    background-color: $primary-green;
+    background-color: #fff;
 }
 
 .sobre{
-    background-color: $primary-green;
+    background-color: #fff;
     display: grid;
 
     img{
-        width: 75%;
-        margin-left: 13%;
-        margin-top: 7%;
+        width: 95%;
+        margin-left: 2.5%;
+        margin-top: 1%;
+        height: 88%;
     }
 
     div{
@@ -18,14 +19,30 @@
     }
 
     h1{
-        color: white;
+        color: $primary-font-color;
         font-weight: 900;
         text-align: left;
         padding: 0px 0px 30px 100px;
     }
 
     p{
-        color: white;
+        color: $primary-font-color;
         padding: 0px 70px 0px 70px
     }
+}
+
+
+.link-sobre{
+    color: $primary-font-color;
+    margin-right: 25px;
+}
+
+.link-sobre2{
+    color: $primary-font-color;
+    margin-left: 35px;
+}
+
+.link-sobre:hover, 
+.link-sobre2:hover{
+    color: $primary-font-hover;
 }

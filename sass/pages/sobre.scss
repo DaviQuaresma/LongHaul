@@ -1,6 +1,5 @@
-.pt-navbar {
-    padding-top: 56px; /* ou ajuste conforme necessário para corresponder à altura da sua barra de navegação */
-    background-color: #fff;
+nav{
+    padding: 0px 0px 0px 0px;
 }
 
 .sobre{
@@ -10,12 +9,12 @@
     img{
         width: 95%;
         margin-left: 2.5%;
-        margin-top: 1%;
-        height: 88%;
+        margin-top: 2%;
+        height: 90%;
     }
 
     div{
-        margin: 100px 50px 100px 50px;
+        margin: 80px 50px 100px 50px;
     }
 
     h1{
@@ -42,7 +41,54 @@
     margin-left: 35px;
 }
 
-.link-sobre:hover, 
-.link-sobre2:hover{
-    color: $primary-font-hover;
+.img-responsive{
+    margin: 10px 10px 10px 10px;
+    width: 100%;
+}
+
+@media (max-width: 425px) {
+    nav{
+        padding: 0px 0px 0px 0px;
+    }
+
+    .mobile-menu {
+      div {
+          background: $primary-black;
+          margin: 5px 20px 0px 0px;
+        }
+  }
+
+    .sobre{
+        background-color: #fff;
+        display: grid;
+    
+        div{
+            margin: 0px 0px 0px 10px;
+        }
+    
+        h1{
+            color: $primary-font-color;
+            font-weight: 900;
+            text-align: left;
+            font-size: 16px;
+            padding: 0px 10px 10px 8px;
+        }
+    
+        p{
+            font-size: 12px;
+            color: $primary-font-color;
+            padding: 0px 20px 10px 8px
+        }
+    }
+    
+    
+    .link-sobre{
+        color: $primary-font-color;
+        margin-right: 25px;
+    }
+    
+    .link-sobre2{
+        color: $primary-font-color;
+        margin-left: 35px;
+    }
 }

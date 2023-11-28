@@ -33,17 +33,17 @@
 /* Estilizando o botão ao passar o mouse sobre ele */
 .default-button:hover {
   background-color: #8C8C7C;
-  color: #ffffff;
+  color: #e5e6e0;
 }
 
 /* Header content */
 .link {
-  color: #ffffff;
+  color: #e5e6e0;
   margin-right: 25px;
 }
 
 .link2 {
-  color: #ffffff;
+  color: #e5e6e0;
   margin-left: 35px;
 }
 
@@ -64,17 +64,14 @@ body, html {
   height: 100%;
 }
 
-.index-img {
-  height: 100vh;
-  background-color: #f5f5f5;
-  display: flex;
-  align-items: left;
-  justify-content: left;
-}
-
 .index-img img {
   width: 100%;
-  height: auto;
+  height: 100vh;
+}
+
+/* Adicione este estilo CSS personalizado */
+.control-index {
+  display: none; /* Isso tornará as setas invisíveis */
 }
 
 .index-text {
@@ -103,10 +100,33 @@ body, html {
   align-items: center;
 }
 
+@media (max-width: 425px) {
+  .index-img img {
+    width: 100%;
+    height: 60vh;
+  }
+  .index-text {
+    padding-top: 50px;
+  }
+  .index-text img {
+    width: 90%;
+    padding: 1% 10% 5% 20%;
+  }
+  .index-text h1 {
+    font-size: 16px;
+  }
+  .index-text p {
+    font-size: 10px;
+  }
+  .index-text button {
+    padding: 5px 10px;
+    font-size: 15px;
+  }
+}
 body {
   margin: 0;
   padding: 0;
-  height: 100vh;
+  height: 100%;
   overflow-x: hidden; /* Para evitar a barra de rolagem horizontal */
   background-size: cover;
   background-position: center;
@@ -129,6 +149,7 @@ header {
 
 .body-background-carrossel {
   cursor: pointer;
+  height: 100%;
 }
 
 .overlay-content {
@@ -136,7 +157,7 @@ header {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white;
+  color: #e5e6e0;
   text-align: center;
 }
 
@@ -156,8 +177,8 @@ header {
   position: absolute;
   bottom: 0px;
   left: 0px;
-  background-color: #1E1C1C;
-  color: white;
+  background-color: black;
+  color: #e5e6e0;
   padding: 10px 30px 10px 30px;
   font-size: 20px;
   display: flex;
@@ -171,13 +192,112 @@ header {
 }
 
 .white-text {
-  color: white;
+  color: #e5e6e0;
 }
 
 .spacer {
   margin: 0 10px; /* ou ajuste conforme necessário */
 }
 
+.logo {
+  width: 30%;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+  height: 8vh;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+}
+.nav-list li {
+  letter-spacing: 3px;
+  margin-left: 32px;
+}
+
+.mobile-menu {
+  text-decoration: none;
+  display: none;
+  cursor: pointer;
+  position: relative; /* Adicione esta linha */
+}
+.mobile-menu div {
+  width: 32px;
+  height: 2px;
+  background: #e5e6e0;
+  margin: 8px;
+  transition: 0.3s;
+}
+
+.nav-list.active {
+  transform: translateX(0);
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.mobile-menu.active .line1 {
+  transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.mobile-menu.active .line2 {
+  opacity: 0;
+}
+
+.mobile-menu.active .line3 {
+  transform: rotate(45deg) translate(-5px, -7px);
+}
+
+@media (max-width: 999px) {
+  .nav-list {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in;
+  }
+  .nav-list.active {
+    transform: translateX(0);
+  }
+  .nav-list li {
+    margin-left: 0;
+    opacity: 0;
+  }
+  .nav-list a {
+    text-decoration: none;
+    color: white;
+  }
+  .mobile-menu {
+    display: block;
+    z-index: 1000; /* Certifique-se de que o botão hamburguer esteja acima do fundo preto */
+  }
+}
+@media (max-width: 425px) {
+  .name-block {
+    padding: 5px 20px 5px 20px;
+    font-size: 15px;
+  }
+}
 .ensaio-link {
   color: #8C8C7C;
   margin-right: 25px;

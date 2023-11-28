@@ -31,18 +31,18 @@
   /* Estilizando o botão ao passar o mouse sobre ele */
   .default-button:hover {
     background-color: $primary-font-color;
-    color: #ffffff;
+    color: $primary-white;
   }
 
 /* Header content */
 
 .link{
-    color: #ffffff;
+    color: $primary-white;
     margin-right: 25px;
 }
 
 .link2{
-    color: #ffffff;
+    color: $primary-white;
     margin-left: 35px;
 }
 
@@ -50,3 +50,19 @@
 .link2:hover{
     color: $primary-font-hover;
 }
+
+@media (max-width: 768px) {
+
+  }
+  
+  @media (max-width: 575px) {
+
+  }
+  
+  @media (max-width: 510px) {
+
+  }
+  
+  @media (max-width: 425px) {
+    
+  }

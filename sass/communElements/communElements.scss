@@ -1,167 +1,167 @@
 ::-webkit-scrollbar{
-    width: 10px;
+  width: 10px;
 }
 
 ::-webkit-scrollbar-track{
-    background-color: $primary-black;
-    border-radius: 30px;
+  background-color: $primary-black;
+  border-radius: 30px;
 }
 
 ::-webkit-scrollbar-thumb{
-    background: $primary-green;
-    border-radius: 30px;
+  background: $primary-green;
+  border-radius: 30px;
 }
 
 /* Estilos do botão */
 .default-button {
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 16px;
-    font-weight: bold;
-    text-align: center;
-    text-decoration: none;
-    cursor: pointer;
-    border: 1px solid $primary-font-color;
-    color: $primary-font-color;
-    background-color: transparent;
-    border-radius: 5px;
-    transition: background-color 0.3s, color 0.3s;
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid $primary-font-color;
+  color: $primary-font-color;
+  background-color: transparent;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
 }
 
-  /* Estilizando o botão ao passar o mouse sobre ele */
+/* Estilizando o botão ao passar o mouse sobre ele */
 .default-button:hover {
-    background-color: $primary-font-color;
-    color: $primary-white;
+  background-color: $primary-font-color;
+  color: $primary-white;
 }
 
 /* Header content */
 
 .link{
-    color: $primary-white;
-    margin-right: 25px;
-    text-decoration: none;
+  color: $primary-white;
+  margin-right: 25px;
+  text-decoration: none;
 }
 
 .link2{
-    color: $primary-white;
-    margin-left: 35px;
-    text-decoration: none;
+  color: $primary-white;
+  margin-left: 35px;
+  text-decoration: none;
 }
 
 .link:hover, 
 .link2:hover{
-    color: $primary-font-hover;
+  color: $primary-font-hover;
 }
 
 .logo {
-    width: 50%;
-    margin: 0px 0px 12px 10px;
+  width: 50%;
+  margin: 0px 0px 12px 10px;
 }
 
 .nav-list {
-    list-style: none;
-    display: flex;
-      
-    li {
-    letter-spacing: 3px;
-    margin-left: 32px;
-  }
+  list-style: none;
+  display: flex;
+    
+  li {
+  letter-spacing: 3px;
+  margin-left: 32px;
+}
 }
 
-  
+
 .mobile-menu {
-      text-decoration: none;
-      display: none;
-      cursor: pointer;
-      position: relative; /* Adicione esta linha */
-      
-    div {
-        width: 22px;
-        height: 2px;
-        background: $primary-white;
-        margin: 8px;
-        transition: 0.3s;
-      }
+    text-decoration: none;
+    display: none;
+    cursor: pointer;
+    position: relative; /* Adicione esta linha */
+    
+  div {
+      width: 22px;
+      height: 2px;
+      background: $primary-white;
+      margin: 8px;
+      transition: 0.3s;
+    }
 }
 
 .nav-list.active {
-      transform: translateX(0);
+    transform: translateX(0);
 }
-  
+
 @keyframes navLinkFade {
-      from {
-        opacity: 0;
-        transform: translateX(50px);
-    }
-      to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-    
-.mobile-menu.active .line1 {
-      transform: rotate(-45deg) translate(-4px, 8px);
-}
-    
-.mobile-menu.active .line2 {
+    from {
       opacity: 0;
-}
-    
-.mobile-menu.active .line3 {
-      transform: rotate(45deg) translate(-1px, -7px);
-}
-  
-@media (max-width: 999px) {
-    .logo{
-      margin-top: 20px;
-    }
-
-    #imagem{
-      padding: 40px 10px 0px 0px;
-    }
-
-      .nav-list {
-        position: fixed;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        background: black;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 20px;
-        transform: translateX(100%);
-        transition: transform 0.3s ease-in;
-        z-index: 999; /* Certifique-se de que o menu esteja acima de outros elementos */
-        height: 100vh; /* Adicione esta linha para cobrir completamente a tela */
-        margin: 0; /* Adicione esta linha para remover qualquer margem */
-
-        li {
-          margin-left: 0;
-          opacity: 0;
-        }
-      
-        a {
-          text-decoration: none;
-          color: white;
-        }
-      }
-    
-      .nav-list.active {
-        transform: translateX(0);
-      }
-    
-      .mobile-menu {
-        display: block;
-        z-index: 1000; /* Certifique-se de que o botão hamburguer esteja acima do fundo preto */
-      }
-}
-  
-  
-  @media (max-width: 425px) {
-    .logo{
-      width: 40%;
+      transform: translateX(50px);
   }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+  
+.mobile-menu.active .line1 {
+    transform: rotate(-45deg) translate(-4px, 8px);
+}
+  
+.mobile-menu.active .line2 {
+    opacity: 0;
+}
+  
+.mobile-menu.active .line3 {
+    transform: rotate(45deg) translate(-1px, -7px);
+}
+
+@media (max-width: 999px) {
+  .logo{
+    margin-top: 20px;
+  }
+
+  #imagem{
+    padding: 40px 10px 0px 0px;
+  }
+
+    .nav-list {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: black;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      transform: translateX(100%);
+      transition: transform 0.3s ease-in;
+      z-index: 999; /* Certifique-se de que o menu esteja acima de outros elementos */
+      height: 100vh; /* Adicione esta linha para cobrir completamente a tela */
+      margin: 0; /* Adicione esta linha para remover qualquer margem */
+
+      li {
+        margin-left: 0;
+        opacity: 0;
+      }
+    
+      a {
+        text-decoration: none;
+        color: white;
+      }
+    }
+  
+    .nav-list.active {
+      transform: translateX(0);
+    }
+  
+    .mobile-menu {
+      display: block;
+      z-index: 1000; /* Certifique-se de que o botão hamburguer esteja acima do fundo preto */
+    }
+}
+
+
+@media (max-width: 425px) {
+  .logo{
+    width: 40%;
+}
 }

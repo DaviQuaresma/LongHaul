@@ -15,8 +15,16 @@
     height: 79.2vh;
 }
 
+#container-image{
+
+}
+
 .image-planta {
     width: 60vh;
+}
+
+.planta-responsive{
+    display: none;
 }
 
 
@@ -79,4 +87,61 @@
     background-color: transparent;
     border-bottom-color: $primary-font-color; /* Cor azul quando o campo está focado */
     box-shadow: none; /* Remove o contorno padrão quando o campo está focado */
+}
+
+
+@media (max-width: 425px){
+
+    html{
+        background-color: $primary-black;
+    }
+
+.main {
+    padding: 0% 10% 0% 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contato-menu {
+    div {
+        background: $primary-white;
+        margin: 4px 20px 0px 0px;
+      }
+
+}
+
+.container-content {
+    height: 0vh;
+}
+
+#container-image{
+
+}
+
+.image-planta {
+    display: none;
+}
+
+.container-image-responsive{
+    padding: 0px 0px 20px 10px;
+}
+
+.planta-responsive{
+    width: 50vh;
+    display: block;
+}
+
+.form-content {
+    background-color: $primary-black;
+    width: 70vh;
+    padding: 30px 20px 0px 80px;
+}
+
+.container-text {
+        h1{
+            margin-top: 20px;
+        }
+        padding: 20px 0px 20px 0px;
+    }
 }

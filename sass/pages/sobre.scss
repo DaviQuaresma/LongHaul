@@ -47,15 +47,29 @@ nav{
 }
 
 @media (max-width: 425px) {
+
+    .mobile-menu.active .line4 {
+        transform: rotate(-45deg) translate(-8px, 2px);
+    }
+      
+    .mobile-menu.active .line5 {
+        opacity: 0;
+    }
+      
+    .mobile-menu.active .line6 {
+        transform: rotate(45deg) translate(-6px, -1px);
+    }
+
     nav{
         padding: 0px 0px 0px 0px;
     }
 
-    .mobile-menu {
+    .sobre-menu {
       div {
           background: $primary-black;
-          margin: 5px 20px 0px 0px;
+          margin: 4px 20px 0px 0px;
         }
+
   }
 
     .sobre{

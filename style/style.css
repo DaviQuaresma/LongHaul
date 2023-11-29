@@ -97,7 +97,7 @@
   }
 }
 .mobile-menu.active .line1 {
-  transform: rotate(-45deg) translate(-4px, 8px);
+  transform: rotate(-45deg) translate(-8px, 2px);
 }
 
 .mobile-menu.active .line2 {
@@ -105,7 +105,7 @@
 }
 
 .mobile-menu.active .line3 {
-  transform: rotate(45deg) translate(-1px, -7px);
+  transform: rotate(45deg) translate(-6px, -1px);
 }
 
 @media (max-width: 999px) {
@@ -152,6 +152,9 @@
 @media (max-width: 425px) {
   .logo {
     width: 40%;
+  }
+  nav {
+    padding: 0px 0px 0px 0px;
   }
 }
 body, html {
@@ -314,6 +317,10 @@ nav {
     padding: 5px 20px 5px 20px;
     font-size: 15px;
   }
+  .ensaio-menu div {
+    background: #e5e6e0;
+    margin: 4px 20px 0px 0px;
+  }
 }
 .ensaio-link {
   color: #8C8C7C;
@@ -393,6 +400,10 @@ body {
   width: 60vh;
 }
 
+.planta-responsive {
+  display: none;
+}
+
 .container-form {
   padding: 0px 40px 40px 0px;
 }
@@ -451,6 +462,45 @@ body {
   box-shadow: none; /* Remove o contorno padrão quando o campo está focado */
 }
 
+@media (max-width: 425px) {
+  html {
+    background-color: #393F41;
+  }
+  .main {
+    padding: 0% 10% 0% 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .contato-menu div {
+    background: #e5e6e0;
+    margin: 4px 20px 0px 0px;
+  }
+  .container-content {
+    height: 0vh;
+  }
+  .image-planta {
+    display: none;
+  }
+  .container-image-responsive {
+    padding: 0px 0px 20px 10px;
+  }
+  .planta-responsive {
+    width: 50vh;
+    display: block;
+  }
+  .form-content {
+    background-color: #393F41;
+    width: 70vh;
+    padding: 30px 20px 0px 80px;
+  }
+  .container-text {
+    padding: 20px 0px 20px 0px;
+  }
+  .container-text h1 {
+    margin-top: 20px;
+  }
+}
 nav {
   padding: 40px 0px 0px 0px;
 }
@@ -495,12 +545,21 @@ nav {
 }
 
 @media (max-width: 425px) {
+  .mobile-menu.active .line4 {
+    transform: rotate(-45deg) translate(-8px, 2px);
+  }
+  .mobile-menu.active .line5 {
+    opacity: 0;
+  }
+  .mobile-menu.active .line6 {
+    transform: rotate(45deg) translate(-6px, -1px);
+  }
   nav {
     padding: 0px 0px 0px 0px;
   }
-  .mobile-menu div {
+  .sobre-menu div {
     background: #393F41;
-    margin: 5px 20px 0px 0px;
+    margin: 4px 20px 0px 0px;
   }
   .sobre {
     background-color: #fff;

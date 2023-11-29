@@ -100,7 +100,7 @@
 }
   
 .mobile-menu.active .line1 {
-    transform: rotate(-45deg) translate(-4px, 8px);
+    transform: rotate(-45deg) translate(-8px, 2px);
 }
   
 .mobile-menu.active .line2 {
@@ -108,7 +108,7 @@
 }
   
 .mobile-menu.active .line3 {
-    transform: rotate(45deg) translate(-1px, -7px);
+    transform: rotate(45deg) translate(-6px, -1px);
 }
 
 @media (max-width: 999px) {
@@ -163,5 +163,8 @@
 @media (max-width: 425px) {
   .logo{
     width: 40%;
+}
+nav{
+  padding: 0px 0px 0px 0px;
 }
 }

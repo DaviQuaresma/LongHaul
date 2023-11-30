@@ -167,4 +167,17 @@
 nav{
   padding: 0px 0px 0px 0px;
 }
+
+.black-menu {
+  div {
+      background: $primary-black;
+      margin: 4px 20px 0px 0px;
+    }
+  }
+  .white-menu {
+    div {
+        background: $primary-white;
+        margin: 4px 20px 0px 0px;
+      }
+    }
 }

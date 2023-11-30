@@ -1,21 +1,29 @@
-.ensaio-link{
+.link, .link2{
     color: $primary-font-color;
-    margin-right: 25px;
 }
 
-.ensaio-link2{
-    color: $primary-font-color;
-    margin-left: 35px;
-}
-
-.ensaio-link:hover, 
-.ensaio-link2:hover{
+.link:hover, 
+.link2:hover{
     color: $primary-font-hover;
 }
 
 
 body {
     margin: 0; /* Remover margens padrão do corpo */
+}
+
+.body-background-carrossel{
+    cursor:auto;
+}
+
+.ensaios-Logo{
+    width: 20%;
+    margin: 0;
+    padding: 0px 20px 10px 0px;
+
+    img{
+        width: 100%;
+    }
 }
 
 .image-container {
@@ -26,18 +34,33 @@ body {
     scroll-behavior: smooth;
 }
 
+/* Adicione a classe personalizada para remover a borda e sombra */
+.no-border-thumbnail {
+    border: none;
+    box-shadow: none;
+}
+
+.image-container {
+    padding-top: 11%;
+    padding-bottom: 2%;
+    display: flex;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    touch-action: pan-y; /* Permitir deslizar na vertical */
+}
+
 .image-container img {
     width: 300px;
     height: 400px;
     object-fit: cover;
     cursor: pointer;
+    transition: transform 0.3s ease-in-out;
 }
 
-.left-arrow-container,
-.right-arrow-container {
-    position: fixed;
-    top: 50%;
-    z-index: 1000;
+.image-container img:hover {
+    transform: scale(1.1);
+    border: none;
+    box-shadow: none;
 }
 
 .left-arrow,
@@ -45,7 +68,14 @@ body {
     color: white;
     cursor: pointer;
     font-size: 50px;
-    padding: 15px; /* Adicionando algum espaço em torno da seta */
+    padding: 15px;
+}
+
+.left-arrow-container,
+.right-arrow-container {
+    position: fixed;
+    top: 50%;
+    z-index: 998;
 }
 
 .left-arrow-container {
@@ -56,3 +86,24 @@ body {
     right: 0;
 }
 
+@media (max-width: 425px) {
+    .ensaios-Logo {
+        width: 40%;
+        margin: 15px 100px 0px 0px;
+    
+        img {
+            width: 100%;
+        }
+    }
+
+    .image-container img {
+        margin-top: 20%;
+        width: 250px;
+        height: 350px;
+    }
+
+    .left-arrow,
+    .right-arrow {
+        display: none;
+    }
+}

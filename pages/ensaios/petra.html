@@ -23,41 +23,23 @@
 </head>
 <body class="body-background-carrossel">
     <header>
-        <nav class="navbar navbar-expand-lg navBar-Home">
-            <div class="container">
-                <!-- Logo à esquerda -->
-                <a class="navbar-brand" href="/dist/index.html">
-                    <img src="/images/ensaioIndividual/LogoVerde.webp" alt="">
-                </a>
-
-                <!-- Botão para acionar o offcanvas -->
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <!-- Itens do Navbar à direita -->
-                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="ensaio-link nav-link" href="/dist/index.html">HOME</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="ensaio-link nav-link" href="/pages/ensaios.html">ENSAIOS</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="ensaio-link nav-link" href="/pages/sobre.html">SOBRE</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="ensaio-link nav-link" href="/pages/contato.html">CONTATO</a>
-                        </li>
-                        <li class="nav-item">
-                            <!-- <a class="link2 nav-link" href="#">PT</a> --> 
-                        </li>
-                    </ul>
-                </div>
-            </div>
+        <nav>
+          <a class="ensaios-Logo" href="/dist/index.html"> 
+            <img src="/images/IndexImg/LogoVerde.webp" alt="">
+        </a>
+          <div class="mobile-menu black-menu">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+          </div>
+          <ul class="nav-list">
+            <li><a class="link" href="/dist/index.html">Home</a></li>
+            <li><a class="link" href="/pages/ensaios.html">Ensaios</a></li>
+            <li><a class="link" href="/pages/sobre.html">Sobre</a></li>
+            <li><a class="link" href="/pages/contato.html">Contato</a></li>
+          </ul>
         </nav>
-    </header>
+      </header>
 
     <section class="scroll-images-container">
         <div class="left-arrow-container">
@@ -68,11 +50,11 @@
 
         <div class="image-container">
             <!-- Adicione mais imagens conforme necessário -->
-            <img src="/images/EnsaiosImg/Petra5.png" class="img-thumbnail mx-2" alt="Image 1" onclick="openModal('/images/EnsaiosImg/Petra5.png')">
-            <img src="/images/HomeImg/Petra1.png" class="img-thumbnail mx-2" alt="Image 2" onclick="openModal('/images/HomeImg/Petra1.png')">
-            <img src="/images/HomeImg/Petra2.png" class="img-thumbnail mx-2" alt="Image 3" onclick="openModal('/images/HomeImg/Petra2.png')">
-            <img src="/images/HomeImg/Petra3.png" class="img-thumbnail mx-2" alt="Image 4" onclick="openModal('/images/HomeImg/Petra3.png')">
-            <img src="/images/HomeImg/Petra4.png" class="img-thumbnail mx-2" alt="Image 5" onclick="openModal('/images/HomeImg/Petra4.png')">
+            <img src="/images/EnsaiosImg/Petra5.png" class="no-border-thumbnail mx-2" alt="Image 1" onclick="openModal('/images/EnsaiosImg/Petra5.png')">
+            <img src="/images/HomeImg/Petra1.png" class="no-border-thumbnail mx-2" alt="Image 2" onclick="openModal('/images/HomeImg/Petra1.png')">
+            <img src="/images/HomeImg/Petra2.png" class="no-border-thumbnail mx-2" alt="Image 3" onclick="openModal('/images/HomeImg/Petra2.png')">
+            <img src="/images/HomeImg/Petra3.png" class="no-border-thumbnail mx-2" alt="Image 4" onclick="openModal('/images/HomeImg/Petra3.png')">
+            <img src="/images/HomeImg/Petra4.png" class="no-border-thumbnail mx-2" alt="Image 5" onclick="openModal('/images/HomeImg/Petra4.png')">
         </div>
 
         <div class="right-arrow-container">
@@ -98,5 +80,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Seu script para abrir o modal -->
     <script src="/js/ensaiosScript.js" defer></script>
+    <script src="/js/navBarScript.js" defer></script>
 </body>
 </html>

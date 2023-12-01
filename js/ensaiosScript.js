@@ -15,6 +15,7 @@ document.querySelector('.image-container').addEventListener('touchend', function
     handleSwipe();
 });
 
+//Função para dar touch scroll na tela responsiva
 function handleSwipe() {
     const deltaX = endX - startX;
     const deltaY = endY - startY;
@@ -38,16 +39,14 @@ function scrollImages(direction) {
     container.scrollLeft += scrollAmount * direction;
 }
 
-//Function para clicar e expandir fotos
-
 function openModal(imageSrc) {
-const modal = new bootstrap.Modal(document.getElementById('imageModal'));
-const modalImage = document.getElementById('modalImage');
-modalImage.src = imageSrc;
-modal.show();
-}
+    const modalImage = document.getElementById('modalImage');
+    modalImage.style.width = 'auto';
+    modalImage.style.maxWidth = '86%';  // Você pode ajustar isso conforme necessário
+    modalImage.style.maxHeight = '86vh';  // Você pode ajustar isso conforme necessário
 
-function closeModal() {
-const modal = new bootstrap.Modal(document.getElementById('imageModal'));
-modal.hide();
+    modalImage.src = imageSrc;
+
+    const modal = new bootstrap.Modal(document.getElementById('imageModal'));
+    modal.show();
 }

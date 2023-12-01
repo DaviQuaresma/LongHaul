@@ -40,35 +40,19 @@ body {
     box-shadow: none;
 }
 
-.image-container {
-    padding-top: 11%;
-    padding-bottom: 2%;
-    display: flex;
-    overflow-x: hidden;
-    scroll-behavior: smooth;
-    touch-action: pan-y; /* Permitir deslizar na vertical */
-}
-
+/* Adicione estilos de transição para suavizar o efeito hover */
 .image-container img {
     width: 300px;
     height: 400px;
     object-fit: cover;
     cursor: pointer;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, border 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .image-container img:hover {
     transform: scale(1.1);
-    border: none;
-    box-shadow: none;
-}
-
-.left-arrow,
-.right-arrow {
-    color: white;
-    cursor: pointer;
-    font-size: 50px;
-    padding: 15px;
+    border: none; /* Remover a borda no hover */
+    box-shadow: none; /* Remover a sombra no hover */
 }
 
 .left-arrow-container,
@@ -78,6 +62,15 @@ body {
     z-index: 998;
 }
 
+.left-arrow,
+.right-arrow {
+    color: white;
+    cursor: pointer;
+    font-size: 50px;
+    padding: 15px; /* Adicionando algum espaço em torno da seta */
+}
+
+
 .left-arrow-container {
     left: 0;
 }
@@ -86,12 +79,49 @@ body {
     right: 0;
 }
 
-@media (max-width: 425px) {
-    .ensaios-Logo {
+.back-arrow {
+    margin: 50px 10px 10px 10px;
+    position: absolute;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    padding: 1px;
+    width: 5%;
+
+    img {
+        width: 100%; /* Use 100% para ocupar todo o espaço da div */
+        display: block; /* Garante que a imagem não adicione espaço extra */
+    }
+}
+
+.back-arrow:hover {
+    transform: scale(1.1);
+}
+
+.image-wrapper {
+    text-align: center;
+    
+    p {
+        font-size: 25px;
+        font-weight: bold;
+    }
+}
+
+.modal {
+    background: white;
+    padding-left: 10%;
+}
+
+/* Estilos para o fundo do modal */
+.modal-content {
+    background: none !important;
+}
+
+@media (max-width: 425px){
+    .ensaios-Logo{
         width: 40%;
         margin: 15px 100px 0px 0px;
     
-        img {
+        img{
             width: 100%;
         }
     }
@@ -103,7 +133,8 @@ body {
     }
 
     .left-arrow,
-    .right-arrow {
-        display: none;
-    }
+.right-arrow {
+    display: none;
+}
+
 }

@@ -149,7 +149,7 @@ nav {
 }
 @media (max-width: 425px) {
   .logo {
-    width: 40%;
+    width: 75%;
   }
   nav {
     padding: 0px 0px 0px 0px;
@@ -471,10 +471,11 @@ body {
     margin: 15px 100px 0px 0px;
   }
   .ensaios-Logo img {
-    width: 100%;
+    margin-left: 10px;
+    width: 150px;
   }
   .image-container img {
-    margin-top: 20%;
+    margin-top: 1%;
     width: 250px;
     height: 350px;
   }
@@ -483,10 +484,25 @@ body {
     display: none;
   }
   .back-arrow {
-    margin: 30px 0px 0px 270px;
+    margin: 0px 0px 0px 10px;
   }
   .back-arrow img {
     width: 40px; /* Use 100% para ocupar todo o espaço da div */
+  }
+  .image-wrapper {
+    margin-top: 70px;
+  }
+  .image-wrapper p {
+    font-size: 20px;
+    margin: 0;
+  }
+  .person-title {
+    margin-bottom: 0px;
+  }
+  .person-title p {
+    margin: 50px 0px 50px 9rem;
+    font-size: 10px;
+    letter-spacing: 5px;
   }
 }
 .form-body {

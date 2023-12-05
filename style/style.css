@@ -37,23 +37,6 @@
 }
 
 /* Header content */
-.link {
-  color: #e5e6e0;
-  margin-right: 25px;
-  text-decoration: none;
-}
-
-.link2 {
-  color: #e5e6e0;
-  margin-left: 35px;
-  text-decoration: none;
-}
-
-.link:hover,
-.link2:hover {
-  color: #A29E9E;
-}
-
 .logo {
   width: 50%;
   margin: 0px 0px 12px 10px;
@@ -63,9 +46,20 @@
   list-style: none;
   display: flex;
 }
+.nav-list .linkWhite {
+  color: #8C8C7C;
+}
 .nav-list li {
   letter-spacing: 3px;
   margin-left: 32px;
+}
+.nav-list a {
+  color: #e5e6e0;
+  margin-right: 25px;
+  text-decoration: none;
+}
+.nav-list a:hover {
+  color: #A29E9E;
 }
 
 .mobile-menu {
@@ -80,6 +74,10 @@
   background: #e5e6e0;
   margin: 8px;
   transition: 0.3s;
+}
+
+nav {
+  gap: 25%;
 }
 
 .nav-list.active {
@@ -353,11 +351,15 @@ body {
 }
 
 .image-container {
-  padding-top: 11%;
+  padding-top: 9%;
   padding-bottom: 2%; /* Adicionando algum espaço na parte inferior */
   display: flex;
   overflow-x: hidden; /* Removendo a barra de rolagem horizontal */
   scroll-behavior: smooth;
+}
+
+.collection-container {
+  padding-top: 6%;
 }
 
 /* Adicione a classe personalizada para remover a borda e sombra */
@@ -374,7 +376,6 @@ body {
   cursor: pointer;
   transition: transform 0.3s ease-in-out, border 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
-
 .image-container img:hover {
   transform: scale(1.1);
   border: none; /* Remover a borda no hover */
@@ -413,7 +414,7 @@ body {
   width: 5%;
 }
 .back-arrow img {
-  width: 100%; /* Use 100% para ocupar todo o espaço da div */
+  width: 50%; /* Use 100% para ocupar todo o espaço da div */
   display: block; /* Garante que a imagem não adicione espaço extra */
 }
 
@@ -439,6 +440,31 @@ body {
   background: none !important;
 }
 
+.collection-header {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: space-between;
+}
+
+.back-arrow img {
+  width: 40px; /* Ajuste o tamanho conforme necessário */
+  height: auto;
+}
+
+.person-title p {
+  margin: 45px 0px 0px 65rem;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 7px;
+}
+
+.btn-close {
+  margin: 0px 0px 10px 350px;
+}
+
 @media (max-width: 425px) {
   .ensaios-Logo {
     width: 40%;
@@ -455,6 +481,12 @@ body {
   .left-arrow,
   .right-arrow {
     display: none;
+  }
+  .back-arrow {
+    margin: 30px 0px 0px 270px;
+  }
+  .back-arrow img {
+    width: 40px; /* Use 100% para ocupar todo o espaço da div */
   }
 }
 .form-body {

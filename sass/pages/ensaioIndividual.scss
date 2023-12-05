@@ -27,11 +27,15 @@ body {
 }
 
 .image-container {
-    padding-top: 11%;
+    padding-top: 9%;
     padding-bottom: 2%; /* Adicionando algum espaço na parte inferior */
     display: flex;
     overflow-x: hidden; /* Removendo a barra de rolagem horizontal */
     scroll-behavior: smooth;
+}
+
+.collection-container{
+    padding-top: 6%;
 }
 
 /* Adicione a classe personalizada para remover a borda e sombra */
@@ -41,18 +45,20 @@ body {
 }
 
 /* Adicione estilos de transição para suavizar o efeito hover */
-.image-container img {
+.image-container {
+    img{
     width: 300px;
     height: 400px;
     object-fit: cover;
     cursor: pointer;
     transition: transform 0.3s ease-in-out, border 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
+    }
 
-.image-container img:hover {
+    img:hover{
     transform: scale(1.1);
     border: none; /* Remover a borda no hover */
     box-shadow: none; /* Remover a sombra no hover */
+    }
 }
 
 .left-arrow-container,
@@ -88,7 +94,7 @@ body {
     width: 5%;
 
     img {
-        width: 100%; /* Use 100% para ocupar todo o espaço da div */
+        width: 50%; /* Use 100% para ocupar todo o espaço da div */
         display: block; /* Garante que a imagem não adicione espaço extra */
     }
 }
@@ -116,6 +122,35 @@ body {
     background: none !important;
 }
 
+.collection-header {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: space-between;
+}
+
+.back-arrow {
+    img {
+        width: 40px; /* Ajuste o tamanho conforme necessário */
+        height: auto;
+    }
+}
+
+.person-title {
+    p {
+        margin: 45px 0px 0px 65rem;
+        font-size: 20px;
+        font-weight: 700;
+        letter-spacing: 7px;
+    }
+}
+
+.btn-close {
+    margin: 0px 0px 10px 350px;
+}
+
 @media (max-width: 425px){
     .ensaios-Logo{
         width: 40%;
@@ -132,9 +167,15 @@ body {
         height: 350px;
     }
 
-    .left-arrow,
+.left-arrow,
 .right-arrow {
     display: none;
 }
 
+.back-arrow {
+    margin: 30px 0px 0px 270px;
+    img {
+        width: 40px; /* Use 100% para ocupar todo o espaço da div */
+    }
+}
 }

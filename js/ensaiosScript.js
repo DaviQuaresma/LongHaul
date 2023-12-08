@@ -15,7 +15,7 @@ document.querySelector('.image-container').addEventListener('touchend', function
     handleSwipe();
 });
 
-//Função para dar touch scroll na tela responsiva
+// Função para dar touch scroll na tela responsiva
 function handleSwipe() {
     const deltaX = endX - startX;
     const deltaY = endY - startY;
@@ -30,23 +30,52 @@ function handleSwipe() {
     }
 }
 
-
-//Function para rolamento das fotos com a seta
-
+// Função para rolar as imagens com a seta
 function scrollImages(direction) {
     const container = document.querySelector('.image-container');
     const scrollAmount = 400; // Ajuste conforme necessário
     container.scrollLeft += scrollAmount * direction;
 }
 
+// Função para abrir o modal
 function openModal(imageSrc) {
     const modalImage = document.getElementById('modalImage');
     modalImage.style.width = 'auto';
-    modalImage.style.maxWidth = '86%';  // Você pode ajustar isso conforme necessário
-    modalImage.style.maxHeight = '86vh';  // Você pode ajustar isso conforme necessário
+    modalImage.style.maxWidth = '83%';
+    modalImage.style.maxHeight = '83vh';
+    modalImage.style.marginLeft = '14%';
+    modalImage.style.marginRight = 'auto';
 
-    modalImage.src = imageSrc;
+    // Cria uma nova imagem para verificar as dimensões
+    const tempImage = new Image();
+    tempImage.src = imageSrc;
 
-    const modal = new bootstrap.Modal(document.getElementById('imageModal'));
-    modal.show();
+    tempImage.onload = function () {
+        const aspectRatio = tempImage.width / tempImage.height;
+
+        // Verifica se a imagem é horizontal
+        if (aspectRatio > 1) {
+            modalImage.style.width = 'auto';
+            modalImage.style.maxWidth = '750px';
+            modalImage.style.maxHeight = '750px';
+            modalImage.style.marginLeft = '0%';
+            modalImage.style.left = '15%';
+            modalImage.style.transform = 'translateX(-15%)';
+
+            // Ajusta a posição do botão para imagens horizontais
+            const closeButton = document.querySelector('.btn-close');
+            closeButton.style.top = '1em';
+            closeButton.style.right = '17em';
+        } else {
+            // Ajusta a posição do botão para imagens verticais
+            const closeButton = document.querySelector('.btn-close');
+            closeButton.style.top = '0.5em';
+            closeButton.style.right = '30em';
+        }
+
+        modalImage.src = imageSrc;
+
+        const modal = new bootstrap.Modal(document.getElementById('imageModal'));
+        modal.show();
+    };
 }

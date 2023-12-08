@@ -112,16 +112,6 @@ body {
     }
 }
 
-.modal {
-    background: white;
-    padding-left: 10%;
-}
-
-/* Estilos para o fundo do modal */
-.modal-content {
-    background: none !important;
-}
-
 .collection-header {
     display: flex;
     justify-content: center;
@@ -147,8 +137,31 @@ body {
     }
 }
 
+.modal {
+    background: white;
+}
+
+/* Estilos para o fundo do modal */
+.modal-content {
+    background: none !important;
+}
+
+.modal-body {
+    position: relative;
+}
+
 .btn-close {
-    margin: 0px 0px 10px 350px;
+    --bs-btn-close-bg: url(/images/ensaioIndividual/exitButton.svg);
+    --bs-btn-close-focus-shadow: 0rem;
+    --bs-btn-close-white-filter: invert(1) grayscale(100%) brightness(200%);
+    width: 4em; /* Tamanho ajustável conforme necessário */
+    height: 4em; /* Tamanho ajustável conforme necessário */
+    padding: 0.01em; /* Espaçamento ajustável conforme necessário */
+    background: transparent var(--bs-btn-close-bg) center/1em auto no-repeat;
+    position: fixed;
+    top: 0.5em; /* Posição ajustável conforme necessário */
+    right: 34em; /* Posição ajustável conforme necessário */
+    z-index: 999; /* Garante que o botão esteja acima da imagem */
 }
 
 @media (max-width: 425px){
@@ -195,5 +208,17 @@ body {
         font-size: 10px;
         letter-spacing: 5px;
     }
+}
+
+.btn-close {
+    margin: 0px 0px 10px 200px;
+}
+
+.modal {
+    background: transparent;
+}
+
+.modal-body {
+    margin-right: 10%;
 }
 }

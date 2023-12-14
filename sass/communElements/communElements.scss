@@ -36,9 +36,10 @@
 
 /* Header content */
 
-.logo {
+.logo, .logo1 {
   width: 50%;
   margin: 0px 0px 12px 10px;
+  z-index: 1000;
 }
 
 .nav-list {
@@ -50,10 +51,10 @@
   }    
   li {
   letter-spacing: 3px;
-  margin-left: 32px;
 }
   a{
     color: $primary-white;
+    font-size: 12px;
   margin-right: 25px;
   text-decoration: none;
   }
@@ -65,18 +66,24 @@
 
 
 .mobile-menu {
-    text-decoration: none;
-    display: none;
-    cursor: pointer;
-    position: relative; /* Adicione esta linha */
-    
+  text-decoration: none;
+  display: none;
+  cursor: pointer;
+  position: relative;
+
   div {
-      width: 22px;
-      height: 2px;
-      background: $primary-white;
-      margin: 8px;
-      transition: 0.3s;
+    width: 22px;
+    height: 2px;
+    background: $primary-white;
+    margin: 8px;
+    transition: 0.3s;
+  }
+
+  &.clicked {
+    div {
+      background: $primary-font-color;
     }
+  }
 }
 
 nav {
@@ -111,7 +118,7 @@ nav {
 }
 
 @media (max-width: 999px) {
-  .logo{
+  .logo, .logo1{
     margin-top: 20px;
   }
 
@@ -125,15 +132,15 @@ nav {
       right: 0;
       bottom: 0;
       left: 0;
-      background: black;
+      background: $primary-white;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      gap: 20px;
+      gap: 4px;
       transform: translateX(100%);
       transition: transform 0.3s ease-in;
-      z-index: 999; /* Certifique-se de que o menu esteja acima de outros elementos */
+      z-index: 995; /* Certifique-se de que o menu esteja acima de outros elementos */
       height: 100vh; /* Adicione esta linha para cobrir completamente a tela */
       margin: 0; /* Adicione esta linha para remover qualquer margem */
 
@@ -143,8 +150,17 @@ nav {
       }
     
       a {
+        font-size: 18px;
         text-decoration: none;
+        font-weight: 500;
         color: white;
+      }
+    }
+
+    .nav-list.black-menu-active {
+      background: $primary-white;
+      a {
+        color: $primary-font-color;
       }
     }
   
@@ -154,13 +170,13 @@ nav {
   
     .mobile-menu {
       display: block;
-      z-index: 1000; /* Certifique-se de que o botão hamburguer esteja acima do fundo preto */
+      z-index: 996; /* Certifique-se de que o botão hamburguer esteja acima do fundo preto */
     }
 }
 
 
 @media (max-width: 425px) {
-  .logo{
+  .logo, .logo1{
     width: 75%;
 }
 nav{

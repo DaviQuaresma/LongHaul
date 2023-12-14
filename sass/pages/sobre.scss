@@ -48,6 +48,14 @@ nav{
 
 @media (max-width: 425px) {
 
+    .logo{
+        z-index: 996;
+    }
+
+    .mobile-menu{
+        z-index: 996;
+    }
+
     .mobile-menu.active .line4 {
         transform: rotate(-45deg) translate(-8px, 2px);
     }

@@ -37,9 +37,10 @@
 }
 
 /* Header content */
-.logo {
+.logo, .logo1 {
   width: 50%;
   margin: 0px 0px 12px 10px;
+  z-index: 1000;
 }
 
 .nav-list {
@@ -51,22 +52,22 @@
 }
 .nav-list li {
   letter-spacing: 3px;
-  margin-left: 32px;
 }
 .nav-list a {
   color: #e5e6e0;
+  font-size: 12px;
   margin-right: 25px;
   text-decoration: none;
 }
 .nav-list a:hover {
-  color: #A29E9E;
+  color: #1E1C1C;
 }
 
 .mobile-menu {
   text-decoration: none;
   display: none;
   cursor: pointer;
-  position: relative; /* Adicione esta linha */
+  position: relative;
 }
 .mobile-menu div {
   width: 22px;
@@ -74,6 +75,9 @@
   background: #e5e6e0;
   margin: 8px;
   transition: 0.3s;
+}
+.mobile-menu.clicked div {
+  background: #8C8C7C;
 }
 
 nav {
@@ -107,7 +111,7 @@ nav {
 }
 
 @media (max-width: 999px) {
-  .logo {
+  .logo, .logo1 {
     margin-top: 20px;
   }
   #imagem {
@@ -119,15 +123,15 @@ nav {
     right: 0;
     bottom: 0;
     left: 0;
-    background: black;
+    background: #e5e6e0;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    gap: 4px;
     transform: translateX(100%);
     transition: transform 0.3s ease-in;
-    z-index: 999; /* Certifique-se de que o menu esteja acima de outros elementos */
+    z-index: 995; /* Certifique-se de que o menu esteja acima de outros elementos */
     height: 100vh; /* Adicione esta linha para cobrir completamente a tela */
     margin: 0; /* Adicione esta linha para remover qualquer margem */
   }
@@ -136,19 +140,27 @@ nav {
     opacity: 0;
   }
   .nav-list a {
+    font-size: 18px;
     text-decoration: none;
+    font-weight: 500;
     color: white;
+  }
+  .nav-list.black-menu-active {
+    background: #e5e6e0;
+  }
+  .nav-list.black-menu-active a {
+    color: #8C8C7C;
   }
   .nav-list.active {
     transform: translateX(0);
   }
   .mobile-menu {
     display: block;
-    z-index: 1000; /* Certifique-se de que o botão hamburguer esteja acima do fundo preto */
+    z-index: 996; /* Certifique-se de que o botão hamburguer esteja acima do fundo preto */
   }
 }
 @media (max-width: 425px) {
-  .logo {
+  .logo, .logo1 {
     width: 75%;
   }
   nav {
@@ -169,7 +181,7 @@ nav {
 
 .link:hover,
 .link2:hover {
-  color: #A29E9E;
+  color: #1E1C1C;
 }
 
 body {
@@ -177,6 +189,7 @@ body {
 }
 
 .body-background-carrossel {
+  background-color: white;
   cursor: auto;
 }
 
@@ -219,6 +232,10 @@ body {
   transform: scale(1.1);
   border: none; /* Remover a borda no hover */
   box-shadow: none; /* Remover a sombra no hover */
+}
+
+.opositive-arrow {
+  display: none;
 }
 
 .left-arrow-container,
@@ -265,8 +282,7 @@ body {
   text-align: center;
 }
 .image-wrapper p {
-  font-size: 25px;
-  font-weight: bold;
+  font-size: 20px;
 }
 
 .collection-header {
@@ -307,24 +323,26 @@ body {
   --bs-btn-close-bg: url(/images/ensaioIndividual/exitButton.svg);
   --bs-btn-close-focus-shadow: 0rem;
   --bs-btn-close-white-filter: invert(1) grayscale(100%) brightness(200%);
-  width: 4em; /* Tamanho ajustável conforme necessário */
-  height: 4em; /* Tamanho ajustável conforme necessário */
-  padding: 0.01em; /* Espaçamento ajustável conforme necessário */
+  width: 3em;
+  height: 3em;
+  padding: 0.25em 0.25em;
   background: transparent var(--bs-btn-close-bg) center/1em auto no-repeat;
   position: fixed;
-  top: 0.5em; /* Posição ajustável conforme necessário */
-  right: 34em; /* Posição ajustável conforme necessário */
+  top: 1em;
+  right: 1em;
   z-index: 999; /* Garante que o botão esteja acima da imagem */
 }
 
 @media (max-width: 425px) {
   .ensaios-Logo {
-    width: 40%;
-    margin: 15px 100px 0px 0px;
+    width: 20%;
+    margin: 15px 130px 0px 0px;
+    z-index: 997;
   }
   .ensaios-Logo img {
     margin-left: 10px;
     width: 150px;
+    z-index: 1000;
   }
   .image-container img {
     margin-top: 1%;
@@ -352,7 +370,7 @@ body {
     margin-bottom: 0px;
   }
   .person-title p {
-    margin: 50px 0px 50px 9rem;
+    margin: 50px 0px 50px 16rem;
     font-size: 10px;
     letter-spacing: 5px;
   }
@@ -420,17 +438,17 @@ body, html {
     height: 50vh;
   }
   .index-text {
-    padding-top: 50px;
+    padding-top: 30px;
   }
   .index-text img {
     width: 90%;
-    padding: 1% 10% 5% 20%;
+    padding: 0% 10% 5% 20%;
   }
   .index-text h1 {
-    font-size: 16px;
+    font-size: 25px;
   }
   .index-text p {
-    font-size: 10px;
+    font-size: 15px;
   }
   .index-text button {
     padding: 5px 10px;
@@ -501,7 +519,7 @@ header {
 
 .dark-text {
   font-weight: 700;
-  color: #A29E9E; /* ou a cor desejada para o texto mais escuro */
+  color: #1E1C1C; /* ou a cor desejada para o texto mais escuro */
 }
 
 .white-text {
@@ -521,10 +539,18 @@ nav {
   height: 8vh;
 }
 
-@media (max-width: 425px) {
+@media (max-width: 500px) {
+  .img-ensaios {
+    width: auto;
+    height: 100vh;
+    object-fit: cover;
+  }
   .name-block {
     padding: 5px 20px 5px 20px;
     font-size: 15px;
+  }
+  .nav-list a {
+    color: #8C8C7C;
   }
 }
 .form-body {
@@ -689,6 +715,12 @@ nav {
 }
 
 @media (max-width: 425px) {
+  .logo {
+    z-index: 996;
+  }
+  .mobile-menu {
+    z-index: 996;
+  }
   .mobile-menu.active .line4 {
     transform: rotate(-45deg) translate(-8px, 2px);
   }

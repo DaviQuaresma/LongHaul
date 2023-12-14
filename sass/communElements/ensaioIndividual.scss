@@ -13,6 +13,7 @@ body {
 }
 
 .body-background-carrossel{
+    background-color: white;
     cursor:auto;
 }
 
@@ -61,6 +62,10 @@ body {
     }
 }
 
+.opositive-arrow{
+    display: none;
+}
+
 .left-arrow-container,
 .right-arrow-container {
     position: fixed;
@@ -107,8 +112,7 @@ body {
     text-align: center;
     
     p {
-        font-size: 25px;
-        font-weight: bold;
+        font-size: 20px;
     }
 }
 
@@ -154,24 +158,26 @@ body {
     --bs-btn-close-bg: url(/images/ensaioIndividual/exitButton.svg);
     --bs-btn-close-focus-shadow: 0rem;
     --bs-btn-close-white-filter: invert(1) grayscale(100%) brightness(200%);
-    width: 4em; /* Tamanho ajustável conforme necessário */
-    height: 4em; /* Tamanho ajustável conforme necessário */
-    padding: 0.01em; /* Espaçamento ajustável conforme necessário */
+    width: 3em;
+    height: 3em;
+    padding: 0.25em 0.25em;
     background: transparent var(--bs-btn-close-bg) center/1em auto no-repeat;
     position: fixed;
-    top: 0.5em; /* Posição ajustável conforme necessário */
-    right: 34em; /* Posição ajustável conforme necessário */
+    top: 1em;
+    right: 1em;
     z-index: 999; /* Garante que o botão esteja acima da imagem */
 }
 
 @media (max-width: 425px){
     .ensaios-Logo{
-        width: 40%;
-        margin: 15px 100px 0px 0px;
+        width: 20%;
+        margin: 15px 130px 0px 0px;
+        z-index: 997;
     
         img{
             margin-left: 10px;
             width: 150px;
+            z-index: 1000;
         }
     }
 
@@ -204,7 +210,7 @@ body {
 .person-title {
     margin-bottom: 0px;
     p {
-        margin: 50px 0px 50px 9rem;
+        margin: 50px 0px 50px 16rem;
         font-size: 10px;
         letter-spacing: 5px;
     }

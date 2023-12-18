@@ -46,28 +46,22 @@ nav {
 }
 
 @media (max-width: 425px) {
+
+  #imagem {
+    padding: 60px 10px 0px 0px;
+  }
+
   .logo {
     z-index: 996;
+    padding-bottom: 5px;
   }
 
   .mobile-menu {
     z-index: 996;
   }
 
-  .mobile-menu.active .line4 {
-    transform: rotate(-45deg) translate(-8px, 2px);
-  }
-
-  .mobile-menu.active .line5 {
-    opacity: 0;
-  }
-
-  .mobile-menu.active .line6 {
-    transform: rotate(45deg) translate(-6px, -1px);
-  }
-
   nav {
-    padding: 0px 0px 0px 0px;
+    padding: 0px;
   }
 
   .sobre {
@@ -91,15 +85,5 @@ nav {
       color: $primary-font-color;
       padding: 0px 20px 10px 8px;
     }
-  }
-
-  .link-sobre {
-    color: $primary-font-color;
-    margin-right: 25px;
-  }
-
-  .link-sobre2 {
-    color: $primary-font-color;
-    margin-left: 35px;
   }
 }

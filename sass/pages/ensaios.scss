@@ -1,78 +1,78 @@
 body {
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    overflow-x: hidden; /* Para evitar a barra de rolagem horizontal */
-    background-size: cover;
-    background-position: center;
-    position: relative; /* Importante para posicionar elementos filhos relativos a este contêiner */
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  overflow-x: hidden; /* Para evitar a barra de rolagem horizontal */
+  background-size: cover;
+  background-position: center;
+  position: relative; /* Importante para posicionar elementos filhos relativos a este contêiner */
 }
 
 /* Estilo para o header ficar sobreposto */
 header {
-    position: fixed;
-    width: 100%;
-    z-index: 1000; /* Certifique-se de que o header está acima do carrossel */
+  position: fixed;
+  width: 100%;
+  z-index: 1000; /* Certifique-se de que o header está acima do carrossel */
 }
 
 /* Estilo para o carrossel ocupar a tela inteira */
 #carouselExampleIndicators {
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
 }
 
-.body-background-carrossel{
-    cursor: pointer;
+.body-background-carrossel {
+  cursor: pointer;
 }
 
 .overlay-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: $primary-white;
-    text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: $primary-white;
+  text-align: center;
 }
 
-.container{
-    img{
-        width: 50%;
-        margin-right: 100%;
-    }
+.container {
+  img {
+    width: 50%;
+    margin-right: 100%;
+  }
 }
 
 .img-ensaios {
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
 }
 
 /* Adicione este estilo para o bloco de nome */
 .name-block {
-    position: absolute;
-    bottom: 0px;
-    left: 0px;
-    background-color: black;
-    color: $primary-white;
-    padding: 10px 30px 10px 30px;
-    font-size: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  background-color: black;
+  color: $primary-white;
+  padding: 10px 30px 10px 30px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .dark-text {
-    font-weight: 700;
-    color: $primary-font-hover; /* ou a cor desejada para o texto mais escuro */
+  font-weight: 700;
+  color: $primary-font-hover; /* ou a cor desejada para o texto mais escuro */
 }
 
 .white-text {
-    color: $primary-white;
+  color: $primary-white;
 }
 
 .spacer {
-    margin: 0 10px; /* ou ajuste conforme necessário */
+  margin: 0 10px; /* ou ajuste conforme necessário */
 }
 
 nav {
@@ -85,26 +85,25 @@ nav {
 }
 
 @media (max-width: 500px) {
-    .img-ensaios {
-        width: auto;
-        height: 100vh;
-        object-fit: cover;
-    }
-    .name-block {
-        padding: 5px 20px 5px 20px;
-        font-size: 15px;
-    }
+  .img-ensaios {
+    width: auto;
+    height: 100vh;
+    object-fit: cover;
+  }
+  .name-block {
+    padding: 5px 20px 5px 20px;
+    font-size: 15px;
+  }
 
-    .nav-list{
-        a{
-            color: $primary-font-color;
-        }
+  .nav-list {
+    a {
+      color: $primary-font-color;
     }
+  }
 
-    // .white-menu:hover {
-    //     div {
-    //         background: $primary-black;
-    //       }
-    //     }
-    
+  // .white-menu:hover {
+  //     div {
+  //         background: $primary-black;
+  //       }
+  //     }
 }

@@ -1,134 +1,129 @@
 .form-body {
-    background-color: $primary-black;
-    margin: 0; /* Remova as margens padrão do corpo para cobrir toda a largura */
+  background-color: $primary-black;
+  margin: 0; /* Remova as margens padrão do corpo para cobrir toda a largura */
 }
 
 .main {
-    padding: 7% 25% 0% 25%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  padding: 7% 25% 0% 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .container-content {
-    background-color: $secundary-black;
-    height: 79.2vh;
+  background-color: $secundary-black;
+  height: 79.2vh;
 }
 
 .image-planta {
-    width: 60vh;
+  width: 60vh;
 }
 
-.planta-responsive{
-    display: none;
+.planta-responsive {
+  display: none;
 }
-
 
 .container-form {
-    padding: 0px 40px 40px 0px;
+  padding: 0px 40px 40px 0px;
 }
 
 .form-content {
-    width: 80vh;
-    padding: 20px 10px 0px 50px;
+  width: 80vh;
+  padding: 20px 10px 0px 50px;
 
-    h1 {
-        color: #fff;
-        font-weight: 600;
-    }
+  h1 {
+    color: #fff;
+    font-weight: 600;
+  }
 
-    p {
-        color: #fff;
-    }
+  p {
+    color: #fff;
+  }
 
-    button {
-        width: 200px;
-        font-size: 15px;
-    }
+  button {
+    width: 200px;
+    font-size: 15px;
+  }
 }
 
 .container-text {
-    padding: 20px 0px 70px 0px;
+  padding: 20px 0px 70px 0px;
 }
 
 .form-control {
-    font-size: 12px;
-    position: relative;
-    background: transparent;
-    border: none;
-    outline: none;
-    color: white;
-    border-bottom: 1px solid white;
-    transition: border-bottom-color 0.3s ease, font-size 0.3s ease, transform 0.3s ease;
+  font-size: 12px;
+  position: relative;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  border-bottom: 1px solid white;
+  transition: border-bottom-color 0.3s ease, font-size 0.3s ease,
+    transform 0.3s ease;
 }
 
 .form-control::placeholder {
-    font-size: 12px;
-    color: white;
-    position: absolute;
-    left: 0;
-    top: 0;
-    transform-origin: left top;
-    transition: font-size 0.3s ease, transform 0.3s ease;
+  font-size: 12px;
+  color: white;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform-origin: left top;
+  transition: font-size 0.3s ease, transform 0.3s ease;
 }
 
 .form-control:focus::placeholder {
-    color: #fff;
-    font-size: 0.8rem;
-    transform: translateY(-12px);
+  color: #fff;
+  font-size: 0.8rem;
+  transform: translateY(-12px);
 }
 
 .form-control:focus {
-    color: $primary-font-color;
-    background-color: transparent;
-    border-bottom-color: $primary-font-color; /* Cor azul quando o campo está focado */
-    box-shadow: none; /* Remove o contorno padrão quando o campo está focado */
+  color: $primary-font-color;
+  background-color: transparent;
+  border-bottom-color: $primary-font-color; /* Cor azul quando o campo está focado */
+  box-shadow: none; /* Remove o contorno padrão quando o campo está focado */
 }
 
+@media (max-width: 425px) {
+  html {
+    background-color: $primary-black;
+  }
 
-@media (max-width: 425px){
-
-    html{
-        background-color: $primary-black;
-    }
-
-.main {
+  .main {
     padding: 0% 10% 0% 2%;
     display: flex;
     justify-content: center;
     align-items: center;
-}
+  }
 
-.container-content {
+  .container-content {
     height: 0vh;
-}
+  }
 
-
-.image-planta {
+  .image-planta {
     display: none;
-}
+  }
 
-.container-image-responsive{
+  .container-image-responsive {
     padding: 0px 0px 20px 10px;
-}
+  }
 
-.planta-responsive{
+  .planta-responsive {
     width: 50vh;
     display: block;
-}
+  }
 
-.form-content {
+  .form-content {
     background-color: $primary-black;
     width: 70vh;
     padding: 30px 20px 0px 80px;
-}
+  }
 
-.container-text {
-        h1{
-            margin-top: 20px;
-        }
-        padding: 20px 0px 20px 0px;
+  .container-text {
+    h1 {
+      margin-top: 20px;
     }
-
+    padding: 20px 0px 20px 0px;
+  }
 }
-

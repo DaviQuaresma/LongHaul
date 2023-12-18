@@ -1,230 +1,230 @@
-.link, .link2{
-    color: $primary-font-color;
+.link,
+.link2 {
+  color: $primary-font-color;
 }
 
-.link:hover, 
-.link2:hover{
-    color: $primary-font-hover;
+.link:hover,
+.link2:hover {
+  color: $primary-font-hover;
 }
-
 
 body {
-    margin: 0; /* Remover margens padrão do corpo */
+  margin: 0; /* Remover margens padrão do corpo */
 }
 
-.body-background-carrossel{
-    background-color: white;
-    cursor:auto;
+.body-background-carrossel {
+  background-color: white;
+  cursor: auto;
 }
 
-.ensaios-Logo{
-    width: 20%;
-    margin: 0;
-    padding: 0px 20px 10px 0px;
+.ensaios-Logo {
+  width: 20%;
+  margin: 0;
+  padding: 0px 20px 10px 0px;
 
-    img{
-        width: 100%;
-    }
+  img {
+    width: 100%;
+  }
 }
 
 .image-container {
-    padding-top: 9%;
-    padding-bottom: 2%; /* Adicionando algum espaço na parte inferior */
-    display: flex;
-    overflow-x: hidden; /* Removendo a barra de rolagem horizontal */
-    scroll-behavior: smooth;
+  padding-top: 9%;
+  padding-bottom: 2%; /* Adicionando algum espaço na parte inferior */
+  display: flex;
+  overflow-x: hidden; /* Removendo a barra de rolagem horizontal */
+  scroll-behavior: smooth;
 }
 
-.collection-container{
-    padding-top: 6%;
+.collection-container {
+  padding-top: 6%;
 }
 
 /* Adicione a classe personalizada para remover a borda e sombra */
 .no-border-thumbnail {
-    border: none;
-    box-shadow: none;
+  border: none;
+  box-shadow: none;
 }
 
 /* Adicione estilos de transição para suavizar o efeito hover */
 .image-container {
-    img{
+  img {
     width: 300px;
     height: 400px;
     object-fit: cover;
     cursor: pointer;
-    transition: transform 0.3s ease-in-out, border 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    }
+    transition: transform 0.3s ease-in-out, border 0.3s ease-in-out,
+      box-shadow 0.3s ease-in-out;
+  }
 
-    img:hover{
+  img:hover {
     transform: scale(1.1);
     border: none; /* Remover a borda no hover */
     box-shadow: none; /* Remover a sombra no hover */
-    }
+  }
 }
 
-.opositive-arrow{
-    display: none;
+.opositive-arrow {
+  display: none;
 }
 
 .left-arrow-container,
 .right-arrow-container {
-    position: fixed;
-    top: 50%;
-    z-index: 998;
+  position: fixed;
+  top: 50%;
+  z-index: 998;
 }
 
 .left-arrow,
 .right-arrow {
-    color: white;
-    cursor: pointer;
-    font-size: 50px;
-    padding: 15px; /* Adicionando algum espaço em torno da seta */
+  color: white;
+  cursor: pointer;
+  font-size: 50px;
+  padding: 15px; /* Adicionando algum espaço em torno da seta */
 }
 
-
 .left-arrow-container {
-    left: 0;
+  left: 0;
 }
 
 .right-arrow-container {
-    right: 0;
+  right: 0;
 }
 
 .back-arrow {
-    margin: 50px 10px 10px 10px;
-    position: absolute;
-    transition: transform 0.3s ease;
-    cursor: pointer;
-    padding: 1px;
-    width: 5%;
+  margin: 50px 10px 10px 10px;
+  position: absolute;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  padding: 1px;
+  width: 5%;
 
-    img {
-        width: 50%; /* Use 100% para ocupar todo o espaço da div */
-        display: block; /* Garante que a imagem não adicione espaço extra */
-    }
+  img {
+    width: 50%; /* Use 100% para ocupar todo o espaço da div */
+    display: block; /* Garante que a imagem não adicione espaço extra */
+  }
 }
 
 .back-arrow:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .image-wrapper {
-    text-align: center;
-    
-    p {
-        font-size: 20px;
-    }
+  text-align: center;
+
+  p {
+    font-size: 20px;
+  }
 }
 
 .collection-header {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-content: space-between;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: space-between;
 }
 
 .back-arrow {
-    img {
-        width: 40px; /* Ajuste o tamanho conforme necessário */
-        height: auto;
-    }
+  img {
+    width: 40px; /* Ajuste o tamanho conforme necessário */
+    height: auto;
+  }
 }
 
 .person-title {
-    p {
-        margin: 45px 0px 0px 65rem;
-        font-size: 20px;
-        font-weight: 700;
-        letter-spacing: 7px;
-    }
+  p {
+    margin: 45px 0px 0px 65rem;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 7px;
+  }
 }
 
 .modal {
-    background: white;
+  background: white;
 }
 
 /* Estilos para o fundo do modal */
 .modal-content {
-    background: none !important;
+  background: none !important;
 }
 
 .modal-body {
-    position: relative;
+  position: relative;
 }
 
 .btn-close {
-    --bs-btn-close-bg: url(/images/ensaioIndividual/exitButton.svg);
-    --bs-btn-close-focus-shadow: 0rem;
-    --bs-btn-close-white-filter: invert(1) grayscale(100%) brightness(200%);
-    width: 3em;
-    height: 3em;
-    padding: 0.25em 0.25em;
-    background: transparent var(--bs-btn-close-bg) center/1em auto no-repeat;
-    position: fixed;
-    top: 1em;
-    right: 1em;
-    z-index: 999; /* Garante que o botão esteja acima da imagem */
+  --bs-btn-close-bg: url(/images/ensaioIndividual/exitButton.svg);
+  --bs-btn-close-focus-shadow: 0rem;
+  --bs-btn-close-white-filter: invert(1) grayscale(100%) brightness(200%);
+  width: 3em;
+  height: 3em;
+  padding: 0.25em 0.25em;
+  background: transparent var(--bs-btn-close-bg) center/1em auto no-repeat;
+  position: fixed;
+  top: 1em;
+  right: 1em;
+  z-index: 999; /* Garante que o botão esteja acima da imagem */
 }
 
-@media (max-width: 425px){
-    .ensaios-Logo{
-        width: 20%;
-        margin: 15px 130px 0px 0px;
-        z-index: 997;
-    
-        img{
-            margin-left: 10px;
-            width: 150px;
-            z-index: 1000;
-        }
-    }
+@media (max-width: 425px) {
+  .ensaios-Logo {
+    width: 20%;
+    margin: 15px 130px 0px 0px;
+    z-index: 997;
 
-    .image-container img {
-        margin-top: 1%;
-        width: 250px;
-        height: 350px;
+    img {
+      margin-left: 10px;
+      width: 150px;
+      z-index: 1000;
     }
+  }
 
-.left-arrow,
-.right-arrow {
+  .image-container img {
+    margin-top: 1%;
+    width: 250px;
+    height: 350px;
+  }
+
+  .left-arrow,
+  .right-arrow {
     display: none;
-}
+  }
 
-.back-arrow {
+  .back-arrow {
     margin: 0px 0px 0px 10px;
     img {
-        width: 40px; /* Use 100% para ocupar todo o espaço da div */
+      width: 40px; /* Use 100% para ocupar todo o espaço da div */
     }
-}
+  }
 
-.image-wrapper {
+  .image-wrapper {
     margin-top: 70px;
     p {
-        font-size: 20px;
-        margin: 0;
+      font-size: 20px;
+      margin: 0;
     }
-}
+  }
 
-.person-title {
+  .person-title {
     margin-bottom: 0px;
     p {
-        margin: 50px 0px 50px 16rem;
-        font-size: 10px;
-        letter-spacing: 5px;
+      margin: 50px 0px 50px 16rem;
+      font-size: 10px;
+      letter-spacing: 5px;
     }
-}
+  }
 
-.btn-close {
+  .btn-close {
     margin: 0px 0px 10px 200px;
-}
+  }
 
-.modal {
+  .modal {
     background: transparent;
-}
+  }
 
-.modal-body {
+  .modal-body {
     margin-right: 10%;
-}
+  }
 }

@@ -5,12 +5,12 @@
 }
 
 ::-webkit-scrollbar-track {
-  background-color: #393f41;
+  background-color: #393F41;
   border-radius: 30px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #8e8d7e;
+  background: #8E8D7E;
   border-radius: 30px;
 }
 
@@ -23,8 +23,8 @@
   text-align: center;
   text-decoration: none;
   cursor: pointer;
-  border: 1px solid #8c8c7c;
-  color: #8c8c7c;
+  border: 1px solid #8C8C7C;
+  color: #8C8C7C;
   background-color: transparent;
   border-radius: 5px;
   transition: background-color 0.3s, color 0.3s;
@@ -32,7 +32,7 @@
 
 /* Estilizando o botão ao passar o mouse sobre ele */
 .default-button:hover {
-  background-color: #8c8c7c;
+  background-color: #8C8C7C;
   color: #e5e6e0;
 }
 
@@ -49,7 +49,7 @@
   display: flex;
 }
 .nav-list .linkWhite {
-  color: #8c8c7c;
+  color: #8C8C7C;
 }
 .nav-list li {
   letter-spacing: 3px;
@@ -61,7 +61,7 @@
   text-decoration: none;
 }
 .nav-list a:hover {
-  color: #1e1c1c;
+  color: #1E1C1C;
 }
 
 .mobile-menu {
@@ -78,7 +78,7 @@
   transition: 0.3s;
 }
 .mobile-menu.clicked div {
-  background: #8c8c7c;
+  background: #8C8C7C;
 }
 
 nav {
@@ -116,9 +116,6 @@ nav {
   .logo1 {
     margin-top: 20px;
   }
-  #imagem {
-    padding: 40px 10px 0px 0px;
-  }
   .nav-list {
     position: fixed;
     top: 0;
@@ -151,7 +148,7 @@ nav {
     background: #e5e6e0;
   }
   .nav-list.black-menu-active a {
-    color: #8c8c7c;
+    color: #8C8C7C;
   }
   .nav-list.active {
     transform: translateX(0);
@@ -170,7 +167,7 @@ nav {
     padding: 0px 0px 0px 0px;
   }
   .black-menu div {
-    background: #393f41;
+    background: #393F41;
     margin: 4px 20px 0px 0px;
   }
   .white-menu div {
@@ -180,12 +177,12 @@ nav {
 }
 .link,
 .link2 {
-  color: #8c8c7c;
+  color: #8C8C7C;
 }
 
 .link:hover,
 .link2:hover {
-  color: #1e1c1c;
+  color: #1E1C1C;
 }
 
 body {
@@ -230,8 +227,7 @@ body {
   height: 400px;
   object-fit: cover;
   cursor: pointer;
-  transition: transform 0.3s ease-in-out, border 0.3s ease-in-out,
-    box-shadow 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, border 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 .image-container img:hover {
   transform: scale(1.1);
@@ -423,11 +419,11 @@ html {
 .index-text h1 {
   font-size: 25px;
   text-align: center;
-  color: #8c8c7c;
+  color: #8C8C7C;
 }
 .index-text p {
   text-align: center;
-  color: #8c8c7c;
+  color: #8C8C7C;
   font-weight: 700;
   font-size: 15px;
   font-style: italic;
@@ -525,7 +521,7 @@ header {
 
 .dark-text {
   font-weight: 700;
-  color: #1e1c1c; /* ou a cor desejada para o texto mais escuro */
+  color: #1E1C1C; /* ou a cor desejada para o texto mais escuro */
 }
 
 .white-text {
@@ -556,11 +552,11 @@ nav {
     font-size: 15px;
   }
   .nav-list a {
-    color: #8c8c7c;
+    color: #8C8C7C;
   }
 }
 .form-body {
-  background-color: #393f41;
+  background-color: #393F41;
   margin: 0; /* Remova as margens padrão do corpo para cobrir toda a largura */
 }
 
@@ -572,7 +568,7 @@ nav {
 }
 
 .container-content {
-  background-color: #1e1c1c;
+  background-color: #1E1C1C;
   height: 79.2vh;
 }
 
@@ -616,8 +612,7 @@ nav {
   outline: none;
   color: white;
   border-bottom: 1px solid white;
-  transition: border-bottom-color 0.3s ease, font-size 0.3s ease,
-    transform 0.3s ease;
+  transition: border-bottom-color 0.3s ease, font-size 0.3s ease, transform 0.3s ease;
 }
 
 .form-control::placeholder {
@@ -637,15 +632,15 @@ nav {
 }
 
 .form-control:focus {
-  color: #8c8c7c;
+  color: #8C8C7C;
   background-color: transparent;
-  border-bottom-color: #8c8c7c; /* Cor azul quando o campo está focado */
+  border-bottom-color: #8C8C7C; /* Cor azul quando o campo está focado */
   box-shadow: none; /* Remove o contorno padrão quando o campo está focado */
 }
 
 @media (max-width: 425px) {
   html {
-    background-color: #393f41;
+    background-color: #393F41;
   }
   .main {
     padding: 0% 10% 0% 2%;
@@ -667,7 +662,7 @@ nav {
     display: block;
   }
   .form-content {
-    background-color: #393f41;
+    background-color: #393F41;
     width: 70vh;
     padding: 30px 20px 0px 80px;
   }
@@ -696,23 +691,23 @@ nav {
   margin: 80px 50px 100px 50px;
 }
 .sobre h1 {
-  color: #8c8c7c;
+  color: #8C8C7C;
   font-weight: 900;
   text-align: left;
   padding: 0px 0px 30px 100px;
 }
 .sobre p {
-  color: #8c8c7c;
+  color: #8C8C7C;
   padding: 0px 70px 0px 70px;
 }
 
 .link-sobre {
-  color: #8c8c7c;
+  color: #8C8C7C;
   margin-right: 25px;
 }
 
 .link-sobre2 {
-  color: #8c8c7c;
+  color: #8C8C7C;
   margin-left: 35px;
 }
 
@@ -722,23 +717,18 @@ nav {
 }
 
 @media (max-width: 425px) {
+  #imagem {
+    padding: 60px 10px 0px 0px;
+  }
   .logo {
     z-index: 996;
+    padding-bottom: 5px;
   }
   .mobile-menu {
     z-index: 996;
   }
-  .mobile-menu.active .line4 {
-    transform: rotate(-45deg) translate(-8px, 2px);
-  }
-  .mobile-menu.active .line5 {
-    opacity: 0;
-  }
-  .mobile-menu.active .line6 {
-    transform: rotate(45deg) translate(-6px, -1px);
-  }
   nav {
-    padding: 0px 0px 0px 0px;
+    padding: 0px;
   }
   .sobre {
     background-color: #fff;
@@ -748,7 +738,7 @@ nav {
     margin: 0px 0px 0px 10px;
   }
   .sobre h1 {
-    color: #8c8c7c;
+    color: #8C8C7C;
     font-weight: 900;
     text-align: left;
     font-size: 16px;
@@ -756,16 +746,8 @@ nav {
   }
   .sobre p {
     font-size: 12px;
-    color: #8c8c7c;
+    color: #8C8C7C;
     padding: 0px 20px 10px 8px;
-  }
-  .link-sobre {
-    color: #8c8c7c;
-    margin-right: 25px;
-  }
-  .link-sobre2 {
-    color: #8c8c7c;
-    margin-left: 35px;
   }
 }
 

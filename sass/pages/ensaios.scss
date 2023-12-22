@@ -13,6 +13,7 @@ header {
   position: fixed;
   width: 100%;
   z-index: 1000; /* Certifique-se de que o header está acima do carrossel */
+  margin-top: 10px; /* Ajuste conforme necessário */
 }
 
 /* Estilo para o carrossel ocupar a tela inteira */
@@ -33,6 +34,13 @@ header {
   transform: translate(-50%, -50%);
   color: $primary-white;
   text-align: center;
+}
+
+.carousel-item {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .container {
@@ -86,8 +94,6 @@ nav {
 
 @media (max-width: 500px) {
   .img-ensaios {
-    width: auto;
-    height: 100vh;
     object-fit: cover;
   }
   .name-block {
@@ -100,10 +106,4 @@ nav {
       color: $primary-font-color;
     }
   }
-
-  // .white-menu:hover {
-  //     div {
-  //         background: $primary-black;
-  //       }
-  //     }
 }

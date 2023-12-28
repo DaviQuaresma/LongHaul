@@ -19,7 +19,7 @@
   width: 52.8vh;
 }
 
-.planta-responsive {
+.img-responsive {
   display: none;
 }
 
@@ -86,6 +86,10 @@
 }
 
 @media (max-width: 425px) {
+  nav{
+    margin-right: 0px;
+  }
+
   html {
     background-color: $primary-black;
   }
@@ -101,29 +105,30 @@
     height: 0vh;
   }
 
+  .container-form {
+    padding: 0px 0px 0px 0px;
+}
+
   .image-planta {
     display: none;
   }
 
-  .container-image-responsive {
-    padding: 0px 0px 20px 10px;
-  }
-
-  .planta-responsive {
-    width: 50vh;
+  .img-responsive {
+    margin: 0px 10px 10px 10px;
+    width: 100%;
     display: block;
   }
 
   .form-content {
     background-color: $primary-black;
-    width: 70vh;
-    padding: 30px 20px 0px 80px;
+    width: 80vh;
+    padding: 0px 15px 40px 40px;
   }
 
   .container-text {
     h1 {
       margin-top: 20px;
     }
-    padding: 20px 0px 20px 0px;
+    padding: 0px 0px 0px 0px;
   }
 }

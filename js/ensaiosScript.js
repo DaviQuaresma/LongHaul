@@ -45,7 +45,7 @@ function scrollImages(direction) {
 function openModal(imageSrc) {
   const modalImage = document.getElementById("modalImage");
   modalImage.style.width = "auto";
-  modalImage.style.marginLeft = "0%";
+  modalImage.style.marginLeft = "6.5%";
   modalImage.style.maxWidth = "90%"; // Você pode ajustar isso conforme necessário
   modalImage.style.maxHeight = "90vh"; // Você pode ajustar isso conforme necessário
   modalImage.style.transform = "translateX(10%)";
@@ -57,26 +57,15 @@ function openModal(imageSrc) {
   tempImage.onload = function () {
     const aspectRatio = tempImage.width / tempImage.height;
 
-    // Verifica se a imagem é horizontal
-    if (aspectRatio > 1) {
-      modalImage.style.width = "auto";
-      modalImage.style.maxWidth = "800px";
-      modalImage.style.maxHeight = "800px";
-      modalImage.style.marginLeft = "20%";
-      // modalImage.style.marginRight = '20%';
-      // modalImage.style.left = '0%';
-      modalImage.style.transform = "translateX(-30%)";
-    }
-
     // Obtém a largura da janela
     var windowWidth = window.innerWidth;
 
-    // Verifica se a largura da janela é menor ou igual a 440px
+    // Verifica se a largura da janela é menor ou igual a 440px e Verifica se a imagem é horizontal
     if (windowWidth <= 440 && aspectRatio > 1) {
       // Ajusta o estilo do modalImage
       modalImage.style.width = "auto";
-      modalImage.style.maxWidth = "290px";
-      modalImage.style.maxHeight = "290px";
+      modalImage.style.maxWidth = "400px";
+      modalImage.style.maxHeight = "400px";
       modalImage.style.marginLeft = "7%";
       modalImage.style.left = "7%";
       modalImage.style.transform = "translateX(-5%)";

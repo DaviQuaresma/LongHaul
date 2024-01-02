@@ -169,6 +169,10 @@ body {
   z-index: 999; /* Garante que o botão esteja acima da imagem */
 }
 
+.next-button{
+  display: none;
+}
+
   @media (max-width: 425px) {
     #scroll-images-container {
       background-color: white;
@@ -278,5 +282,24 @@ body {
 
   .modal-body {
     margin-right: 0%;
+  }
+
+  .next-button{
+    display: block;
+    padding: 40px 10px 10px 20px;
+      a{
+        text-decoration: none;
+        button{
+          border: 0;
+          color: $primary-font-color;
+          background-color: transparent;
+          font-weight: 600;
+          font-size: 20px;
+          letter-spacing: 3px;
+        }
+      }
+    }
+  .next-button button:hover{
+    color: $primary-font-hover;
   }
 }

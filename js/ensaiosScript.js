@@ -62,13 +62,21 @@ function openModal(imageSrc) {
 
     // Verifica se a largura da janela é menor ou igual a 440px e Verifica se a imagem é horizontal
     if (windowWidth <= 440 && aspectRatio > 1) {
-      // Ajusta o estilo do modalImage
+      // Ajusta o estilo do modalImage para telas de celular com imagens horizontais
       modalImage.style.width = "auto";
       modalImage.style.maxWidth = "400px";
       modalImage.style.maxHeight = "400px";
       modalImage.style.marginLeft = "7%";
       modalImage.style.left = "7%";
       modalImage.style.transform = "translateX(-5%)";
+    } else if (windowWidth > 440 && aspectRatio > 1) {
+      // Ajusta o estilo do modalImage para telas maiores com imagens horizontais
+      modalImage.style.width = "850px"; // Ajuste conforme necessário
+      modalImage.style.maxWidth = "850px";
+      modalImage.style.maxHeight = "850px";
+      modalImage.style.marginLeft = "-35%";
+      modalImage.style.left = "-35%";
+      modalImage.style.transform = "translateX(0)";
     }
 
     modalImage.src = imageSrc;
@@ -77,6 +85,7 @@ function openModal(imageSrc) {
     modal.show();
   };
 }
+
 
 //Nova função para validar proporções
 // function openModal(imageSrc) {

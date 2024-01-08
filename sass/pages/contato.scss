@@ -122,7 +122,7 @@
   .form-content {
     background-color: $primary-black;
     width: 80vh;
-    padding: 0px 15px 40px 40px;
+    padding: 0px 20px 40px 40px;
   }
 
   .container-text {
@@ -130,5 +130,21 @@
       margin-top: 20px;
     }
     padding: 0px 0px 0px 0px;
+  }
+}
+
+@media (max-width: 375px) {
+  .form-content {
+    background-color: $primary-black;
+    width: 70vh;
+    padding: 0px 25px 40px 40px;
+  }
+}
+
+@media (max-width: 320px) {
+  .form-content {
+    background-color: $primary-black;
+    width: 63vh;
+    padding: 0px 25px 40px 40px;
   }
 }

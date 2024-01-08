@@ -82,3 +82,24 @@ button{
       }
     }
 }
+
+@media (max-width: 375px) {
+
+.index-text {
+    padding-top: 40px;
+  }
+}
+
+  @media (max-width: 320px) {
+  .index-text {
+      padding-top: 40px;
+    img{
+          width: 95%;
+      }
+      
+    h1{
+          font-size: 22px;
+        }
+  
+    }
+  }

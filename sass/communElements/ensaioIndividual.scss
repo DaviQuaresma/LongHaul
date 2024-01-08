@@ -303,3 +303,35 @@ body {
     color: $primary-font-hover;
   }
 }
+
+
+@media (max-width: 375px) {
+
+.back-arrow {
+  margin: 0px 300px 0px 0px;
+}
+
+.person-title {
+  margin-bottom: 0px;
+  p {
+    margin: 12px 0px 10px 9rem;
+    font-size: 10px;
+    letter-spacing: 5px;
+  }
+}
+}
+
+@media (max-width: 320px){
+  .back-arrow {
+    margin: 0px 250px 0px 0px;
+  }
+  
+  .person-title {
+    margin-bottom: 0px;
+    p {
+      margin: 12px 0px 10px 8rem;
+      font-size: 7px;
+      letter-spacing: 5px;
+    }
+  }
+}

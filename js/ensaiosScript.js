@@ -61,13 +61,29 @@ function openModal(imageSrc) {
     var windowWidth = window.innerWidth;
 
     // Verifica se a largura da janela é menor ou igual a 440px e Verifica se a imagem é horizontal
-    if (windowWidth <= 440 && aspectRatio > 1) {
+    if (windowWidth <= 425 && windowWidth >= 376 && aspectRatio > 1) {
       // Ajusta o estilo do modalImage para telas de celular com imagens horizontais
       modalImage.style.width = "auto";
       modalImage.style.maxWidth = "400px";
       modalImage.style.maxHeight = "400px";
       modalImage.style.marginLeft = "7%";
       modalImage.style.left = "7%";
+      modalImage.style.transform = "translateX(-5%)";
+    } else if (windowWidth <= 375 && windowWidth >= 321 && aspectRatio > 1) {
+      // Ajusta o estilo do modalImage para telas maiores com imagens horizontais
+      modalImage.style.width = "auto";
+      modalImage.style.maxWidth = "360px";
+      modalImage.style.maxHeight = "360px";
+      modalImage.style.marginLeft = "6%";
+      modalImage.style.left = "6%";
+      modalImage.style.transform = "translateX(-5%)";
+    } else if (windowWidth <= 320 && aspectRatio > 1) {
+      // Ajusta o estilo do modalImage para telas maiores com imagens horizontais
+      modalImage.style.width = "auto";
+      modalImage.style.maxWidth = "310px";
+      modalImage.style.maxHeight = "310px";
+      modalImage.style.marginLeft = "5%";
+      modalImage.style.left = "5%";
       modalImage.style.transform = "translateX(-5%)";
     } else if (windowWidth > 440 && aspectRatio > 1) {
       // Ajusta o estilo do modalImage para telas maiores com imagens horizontais

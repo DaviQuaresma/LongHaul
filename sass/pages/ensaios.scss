@@ -73,7 +73,7 @@ header {
 
 .dark-text {
   font-weight: 700;
-  color: $primary-font-hover; /* ou a cor desejada para o texto mais escuro */
+  color: $primary-white; /* ou a cor desejada para o texto mais escuro */
 }
 
 .white-text {
@@ -95,13 +95,13 @@ nav {
 
 @media (max-width: 425px) {
   .img-ensaios {
-    object-fit: cover;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
+    
   }
   .name-block {
     position: absolute;
-    padding: 5px 20px 5px 20px;
+    padding: 5px 20px 10px 20px;
     font-size: 15px;
   }
 }

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Link do Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
+    <!-- Link do Js -->
+    <script src="/js/ensaiosScript.js" defer></script>
+    <script src="/js/navBarScript.js" defer></script>
+
+    <!-- Link do Css -->
+    <link rel="stylesheet" href="/font/style.css" />
+
+    <link rel="shortcut icon" href="/images/IndexImg/favicon.ico" type="image/x-icon">
+
+    <title>Ensaios - Giovana</title>
+  </head>
+  <body class="body-background-carrossel">
+    <header>
+      <nav>
+        <a class="logo" href="/index.html">
+          <img class="logo" src="/images/IndexImg/LogoVerde.webp" alt="" />
+        </a>
+        <div class="mobile-menu black-menu">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+        <ul class="nav-list">
+          <li><a class="linkWhite" href="/index.html">HOME</a></li>
+          <li><a class="linkWhite" href="/pages/ensaios.html">ENSAIOS</a></li>
+          <li><a class="linkWhite" href="/pages/sobre.html">SOBRE</a></li>
+          <li><a class="linkWhite" href="/pages/contato.html">CONTATO</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="scroll-collections-container">
+      <div class="left-arrow-container opositive-arrow">
+        <div class="left-arrow" onclick="scrollImages(-1)">
+          <img
+            class="arrow"
+            src="/images/ensaioIndividual/arrowLeft.svg"
+            alt=""
+          />
+        </div>
+      </div>
+
+      <div class="image-container">
+        <!-- Adicione mais imagens conforme necessário -->
+        <div class="image-wrapper">
+          <p class="link">COLLECTION I</p>
+          <a href="./giovana1.html">
+            <img
+              src="/images/Photos/giovana/Collection01/giovanaaguiacollection1-13.png"
+              class="no-border-thumbnail mx-2"
+              alt="Image 1"
+            />
+          </a>
+        </div>
+
+        <div class="image-wrapper">
+          <p class="link">COLLECTION II</p>
+          <a href="./giovana2.html">
+            <img
+              src="/images/Photos/giovana/Collection02/giovanaaguiacollection2-14.png"
+              class="no-border-thumbnail mx-2"
+              alt="Image 2"
+            />
+          </a>
+        </div>
+
+      <div class="right-arrow-container opositive-arrow">
+        <div class="right-arrow" onclick="scrollImages(1)">
+          <img
+            class="arrow"
+            src="/images/ensaioIndividual/arrowRight.svg"
+            alt=""
+          />
+        </div>
+      </div>
+    </section>
+
+    <div class="modal" id="imageModal" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content border-0">
+          <button
+            type="button"
+            class="btn-close position-absolute top-0 end-0 m-3"
+            aria-label="Fechar"
+            onclick="closeModal()"
+          ></button>
+          <div class="modal-body p-0">
+            <img
+              id="modalImage"
+              src=""
+              class="img-fluid"
+              alt="Imagem Expandida"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS (optional) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

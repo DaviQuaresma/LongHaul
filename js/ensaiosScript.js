@@ -64,11 +64,11 @@ function openModal(imageSrc) {
     if (windowWidth <= 425 && windowWidth >= 376 && aspectRatio > 1) {
       // Ajusta o estilo do modalImage para telas de celular com imagens horizontais
       modalImage.style.width = "auto";
-      modalImage.style.maxWidth = "400px";
-      modalImage.style.maxHeight = "400px";
-      modalImage.style.marginLeft = "7%";
-      modalImage.style.left = "7%";
-      modalImage.style.transform = "translateX(-5%)";
+      modalImage.style.maxWidth = "380px";
+      modalImage.style.maxHeight = "380px";
+      // modalImage.style.marginLeft = "10%";
+      // modalImage.style.left = "10%";
+      modalImage.style.transform = "translateX(-6%)";
     } else if (windowWidth <= 375 && windowWidth >= 321 && aspectRatio > 1) {
       // Ajusta o estilo do modalImage para telas maiores com imagens horizontais
       modalImage.style.width = "auto";

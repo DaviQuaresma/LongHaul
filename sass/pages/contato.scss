@@ -85,6 +85,28 @@
   box-shadow: none; /* Remove o contorno padrão quando o campo está focado */
 }
 
+.custom-alert {
+  display: none;
+  position: fixed;
+  color: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: black;
+  border: 1px solid #ccc;
+  padding: 20px;
+  text-align: center;
+  z-index: 1;
+}
+
+.close-btn {
+  color: white;
+  float: right;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
 @media (max-width: 425px) {
   nav{
     margin-right: 0px;

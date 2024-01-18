@@ -51,7 +51,7 @@ header {
   }
 }
 
-.img-ensaios {
+.photo-ensaios {
   width: 100vw;
   height: 100vh;
   object-fit: cover;
@@ -93,12 +93,22 @@ nav {
   height: 8vh;
 }
 
+.img-ensaios-responsive{
+  display: none;
+}
+
 @media (max-width: 425px) {
-  .img-ensaios {
+  .photo-ensaios {
+    display: none;
+  }
+
+  .img-ensaios-responsive{
+    display: block;
     width: 100vw;
     height: 100vh;
-    
+    object-fit: cover;
   }
+
   .name-block {
     position: absolute;
     padding: 5px 20px 10px 20px;

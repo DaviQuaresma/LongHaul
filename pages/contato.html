@@ -120,7 +120,8 @@
     <script src="/js/navBarScript.js"></script>
     <script>
       async function mandaEmail(event) {
-        event.preventDefault(); // Impede o envio do formulário
+        
+        // event.preventDefault(); // Impede o envio do formulário
 
         try {
           const nome = document.getElementById("nome").value;
@@ -135,6 +136,8 @@
             assunto: assunto,
             message: message, // Corrigido de "message" para "message"
           };
+
+          //alert(`Seu email foi enviado, aguarde o contato do Longhaul para confirmar o ensaio!`)
 
           const url = "https://victors-page-api.onrender.com/sendMail";
 
@@ -154,6 +157,7 @@
 
           const result = await response.json(); // Converte a resposta em JSON
           console.log("Resposta da API:", result);
+          
         } catch (error) {
           console.error("Erro:", error);
         }

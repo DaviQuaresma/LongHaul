@@ -306,6 +306,10 @@ body {
   .next-button button:hover{
     color: $primary-font-hover;
   }
+
+  #short-phrase{
+    margin-left: 16rem;
+  }
 }
 
 
@@ -323,6 +327,10 @@ body {
     letter-spacing: 5px;
   }
 }
+
+#short-phrase{
+  margin-left: 15rem;
+}
 }
 
 @media (max-width: 320px){
@@ -337,5 +345,9 @@ body {
       font-size: 7px;
       letter-spacing: 5px;
     }
+  }
+
+  #short-phrase{
+    margin-left: 13rem;
   }
 }

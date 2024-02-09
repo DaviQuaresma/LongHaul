@@ -21,107 +21,92 @@
   <body class="form-body">
     <header>
       <nav>
-        <a style="z-index: 1000" href="/index.html"
-          ><img class="logo" src="/images/HomeImg/LogoBranca.webp" alt=""
-        /></a>
-        <div class="mobile-menu white-menu">
+        <a class="logo" href="/index.html">
+          <img class="logo" src="/images/IndexImg/LogoVerde.webp" alt="" />
+        </a>
+        <div class="mobile-menu black-menu">
           <div class="line1"></div>
           <div class="line2"></div>
           <div class="line3"></div>
         </div>
         <ul class="nav-list">
-          <li><a href="/index.html">HOME</a></li>
-          <li><a href="/pages/ensaios.html">ENSAIOS</a></li>
-          <li><a href="/pages/sobre.html">SOBRE</a></li>
-          <li><a href="/pages/contato.html">CONTATO</a></li>
+          <li><a class="linkWhite" href="/index.html">HOME</a></li>
+          <li><a class="linkWhite" href="/pages/ensaios.html">ENSAIOS</a></li>
+          <li><a class="linkWhite" href="/pages/sobre.html">SOBRE</a></li>
+          <li><a class="linkWhite" href="/pages/contato.html">CONTATO</a></li>
         </ul>
       </nav>
     </header>
 
-    <section class="main">
-      <div class="container-content">
-        <div class="container-form">
-          <div class="form-content">
-            <form action="">
-              <div class="container-text">
-                <div id="imagem">
-                  <img
-                    class="img-responsive"
-                    src="/images/ContatoImg/contatopag2.png"
-                    alt=""
-                  />
-                </div>
+    <section>
+      <div id="imagem-contact">
+        <img class="img-contact" src="/images/ContatoImg/Contato.png" alt="" />
+      </div>
 
-                <h1>Entre em contato</h1>
-                <p>Entre em contato para que eu possa te ajudar!</p>
-              </div>
-
-              <div class="row">
-                <div class="col">
-                  <input
-                    type="text"
-                    id="nome"
-                    class="form-control"
-                    placeholder="Nome Completo"
-                    aria-label="First name"
-                  />
-                </div>
-
-                <div class="col">
-                  <input
-                    type="email"
-                    id="email"
-                    class="form-control"
-                    placeholder="Email"
-                    aria-label="Email"
-                  />
-                </div>
-
-                <div class="col-12 mt-4">
-                  <input
-                    type="text"
-                    id="assunto"
-                    class="form-control"
-                    placeholder="Asunto"
-                  />
-                </div>
-
-                <div class="col-12 mt-4">
-                  <input
-                    type="text"
-                    id="message"
-                    class="form-control"
-                    placeholder="Sua mensagem"
-                  />
-                </div>
-
-                <div class="container-button">
-                  <button
-                    onclick="mandaEmail(event)"
-                    id="enviar"
-                    class="default-button form-button mt-5"
-                  >
-                    Enviar Mensagem
-                  </button>
-                </div>
-              </div>
-            </form>
-          </div>
+      <div id="imagem-contact">
+        <img class="img-responsive-contact" src="/images/ContatoImg/ContatoCel.png" alt="" />
+      </div>
+      
+      <div class="main">
+      <div class="form-content">
+        <div class="contact-text">
+          <h1>CONTATO</h1>
+          <p>Entre em contato para que eu possa te ajudar!</p>
         </div>
-      </div>
 
-      <div id="container-image">
-        <img class="image-planta" src="/images/ContatoImg/contatopag.png" alt="" />
+        <form>
+          <div class="form-field">
+            <p><b>Nome Completo: </b>(Obrigatório)</p>
+            <input
+              type="text"
+              id="nome"
+            />
+          </div>
+
+          <div class="form-field">
+            <p><b> Email: </b>(Obrigatório)</p>
+            <input
+              type="email"
+              id="email"
+            />
+          </div>
+
+          <div class="form-field">
+            <p><b>Assunto: </b>(Obrigatório)</p>
+            <input
+              type="text"
+              id="assunto"
+            />
+          </div>
+
+          <div class="form-field">
+            <p><b>Mensagem: </b>(Obrigatório)</p>
+            <textarea name="message" id="message" cols="75" rows="5"></textarea>
+          </div>
+
+          <input 
+            onclick="mandaEmail(event)"
+            type="submit" 
+            value="ENVIAR"
+            class="default-button form-button mt-0"
+            id="enviar">
+        </form>
       </div>
+      <div class="map">
+        <h1>Contagem, MG</h1>
+        <div id="map"></div>
+      </div>
+    </div>
     </section>
 
     <!-- Adicione o Bootstrap JS (opcional, mas necessário para algumas funcionalidades) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="/js/navBarScript.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyALrftz8uhY-RYjBOQlqG3XidhXagF_rm8&callback=initMap" asyn defer></script>
+    
     <script>
       async function mandaEmail(event) {
-        
-        event.preventDefault(); // Impede o envio do formulário
+        // event.preventDefault(); // Impede o envio do formulário
 
         try {
           const nome = document.getElementById("nome").value;
@@ -162,6 +147,17 @@
           console.error("Erro:", error);
         }
       }
+
+      var map
+        function initMap(){
+          map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: -19.9323224361735, lng: -44.0077960004711},
+          zoom: 11,
+          disableDefaultUI: true
+        });
+      }
+
+
     </script>
   </body>
 </html>

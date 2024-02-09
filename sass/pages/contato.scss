@@ -1,5 +1,161 @@
-.form-body {
-  background-color: $primary-black;
-  margin: 0; /* Remova as margens padrão do corpo para cobrir toda a largura */
-  padding: 0; /* Remova as margens padrão do corpo para cobrir toda a largura */
+.main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  padding-bottom: 80px;
+}
+
+
+.form-body{
+  background-color: $primary-white;
+}
+
+
+.form-content{
+  display: grid;
+
+}
+
+.contact-text{
+  display: grid;
+  justify-self: baseline;
+  gap: 15px;
+  margin: 100px 0px 0px 0px;
+
+  h1{
+    font-weight: 700;
+    font-size: 27px;
+  }
+  p{
+    font-size: 18px;
+  }
+}
+
+.form-field{
+  margin-bottom: 1rem;
+
+  input{
+    width: 40rem;
+    height: 2.5rem;
+    border: 0.5px solid $primary-black;
+  }
+
+  p{
+    font-size: 15px;
+    margin-bottom: 0px;
+  }
+}
+
+.map{
+  margin-top: 90px;
+  h1{
+    font-size: 15px;
+  }
+}
+
+#map{
+  width: 350px;
+  height: 400px;
+  background: #ddd;
+}
+
+.img-contact{
+  padding-top: 60px;
+  width: 95%;
+  margin-left: 2.5%;
+  margin-top: 2%;
+}
+
+#imagem-contact{
+  padding: 0px 0px 0px 0px;
+}
+
+.img-responsive-contact{
+  display: none;
+}
+
+@media (max-width: 425px){
+  .main{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    padding-bottom: 90px;
+  }
+
+  .img-contact{
+    display: none;
+  }
+
+  .img-responsive-contact{
+    display: block;
+    width: 90%;
+    margin: 0px 0px 0px 15px;
+  }
+  
+  #imagem-contact{
+    padding: 60px 0px 0px 0px;
+  }
+  
+  .form-body{
+    background-color: $primary-white;
+  }
+  
+  .form-content{
+    display: grid;
+    width: 350px;
+  }
+  
+  .contact-text{
+    display: grid;
+    justify-self: baseline;
+    gap: 15px;
+    margin: 50px 0px 0px 0px;
+  
+    h1{
+      font-weight: 700;
+      font-size: 17px;
+    }
+    p{
+      font-size: 16px;
+    }
+  }
+  
+  .form-field{
+    margin-bottom: 1rem;
+    
+    input{
+      width: 22rem;
+      height: 1.5rem;
+      border: 0.5px solid $primary-black;
+    }
+  
+    p{
+      font-size: 10px;
+      margin-bottom: 0px;
+    }
+
+    textarea{
+      width: 22rem;
+      height: 5rem;
+    }
+  }
+
+  #enviar{
+  }
+  
+  .map{
+    margin-left: 0px;
+    margin-top: 30px;
+    h1{
+      font-size: 15px;
+    }
+  }
+  
+  #map{
+    width: 350px;
+    height: 400px;
+    background: #ddd;
+  }
 }

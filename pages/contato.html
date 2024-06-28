@@ -108,6 +108,11 @@
       async function mandaEmail(event) {
         event.preventDefault(); // Impede o envio do formulário
 
+        const errorMessage = document.getElementById("error-message");
+        const successMessage = document.getElementById("success-message");
+        errorMessage.style.display = "none";
+        successMessage.style.display = "none";
+
         try {
           const nome = document.getElementById("nome").value;
           const email = document.getElementById("email").value;
@@ -140,24 +145,15 @@
 
           const result = await response.json(); // Converte a resposta em JSON
           console.log("Resposta da API:", result);
+          successMessage.textContent = "Email enviado com sucesso!";
+          successMessage.style.display = "block";
           
         } catch (error) {
           console.error("Erro:", error);
+          errorMessage.textContent = `Erro ao enviar email: ${error.message}`;
+          errorMessage.style.display = "block";
         }
       }
-
-      
-
-      //
-      var map
-        function initMap(){
-          map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: -19.9323224361735, lng: -44.0077960004711},
-          zoom: 11,
-          disableDefaultUI: true
-        });
-      }
-
 
     </script>
   </body>
